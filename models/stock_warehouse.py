@@ -20,11 +20,11 @@ class Location(models.Model):
             if loc.excise_paid_manual:
                 loc.excise_unpaid = False
                 return
-            loc.excise_unpaid =  loc.get_warehouse().excise_warehouse_no
+            loc.excise_unpaid =  loc.warehouse_id.excise_warehouse_no
 
 
     
     def _compute_whseno(self):
         for loc in self:
-            loc.excise_warehouse_no =  loc.get_warehouse().excise_warehouse_no
+            loc.excise_warehouse_no =  loc.warehouse_id.excise_warehouse_no
             
