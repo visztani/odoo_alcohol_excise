@@ -15,10 +15,10 @@ class StockMoveLine(models.Model):
             'stock_move_id' : sml.move_id.id,
             #'company_id' : sml.company_id,
             'product_id' : sml.product_id.id,       
-            #'move_qty' : sml.product_qty,
+            #'move_qty' : sml.reserved_qty,
         }
         if sml.qty_done == 0:
-            _qty = sml.product_qty
+            _qty = sml.reserved_qty
         else:
             _qty = sml.qty_done
         excise_result = self.env['excise.category']._calc_excise(sml.product_id,_qty)
@@ -40,7 +40,7 @@ class StockMoveLine(models.Model):
         if not self.move_id._requires_excise_move():
             return True                       
         if self.qty_done == 0:
-            _qty = self.product_qty
+            _qty = self.reserved_qty
         else:
             _qty = self.qty_done
         for em in self.excise_move_ids:
