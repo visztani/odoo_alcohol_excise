@@ -8,11 +8,13 @@
             <field name="arch" type="xml">
                 <page name="inventory" position="after">
                     <page name="excise" string="Excise">
-                        <group name="excise" string="Excise">
+                        <group name="excise_toggle" string="Excise">
                             <label for="excise_active"/>
                             <div class="o_row" name="excise_active_row">
                                 <field name="excise_active" string="Track Excise" widget="boolean_toggle"/>
                             </div>
+                        </group>
+                        <group name="excise_data">
 
                             <div class="o_row" name="excise_abv_row" attrs="{'invisible':[('excise_active', '=', False)]}">
                                 <label for="excise_abv"/>
