@@ -13,7 +13,7 @@
                             <div class="o_row" name="excise_active_row">
                                 <field name="excise_active" string="Track Excise" widget="boolean_toggle"/>
                             </div>
-                            
+
                             <div class="o_row" name="excise_abv_row" attrs="{'invisible':[('excise_active', '=', False)]}">
                                 <label for="excise_abv"/>
                                 <field name="excise_abv" string="ABV" help="Average By Volume (% alcohol in product)"/>
@@ -28,7 +28,7 @@
                             
                             <div class="o_row" name="excise_abv_row" attrs="{'invisible':[('excise_active', '=', False)]}">
                                 <label for="excise_volume" />
-                                <field name="excise_volume" string="Exc.Vol(L)" />
+                                <field name="excise_volume" string="Excisable Volume (L) tezstszövegtesztszöveg" />
                             </div>
                             
                         </group>
