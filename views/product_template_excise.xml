@@ -40,7 +40,7 @@
         <record model="ir.ui.view" id="product_product_tree_excise">
             <field name="name">excise.product_product_tree_inherit</field>
             <field name="model">product.product</field>
-            <field name="inherit_id" ref="product.product_product_tree_view"/>
+            <field name="inherit_id" ref="product.product_template_tree_view"/>
             <field name="arch" type="xml">
                 <field name="company_id" position="after">
                     <field name="excise_volume"/>
