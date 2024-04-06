@@ -14,6 +14,7 @@
         'views/excise_menu.xml',
         'views/stock_warehouse_excise.xml',
         'views/excise_move_views.xml',
+        'sale_order_view_excise.xml',
         #'views/partner_excise.xml',
         'security/ir.model.access.csv',
         'data/excise_category_data.xml',
