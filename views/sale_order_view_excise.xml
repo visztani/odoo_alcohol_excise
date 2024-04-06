@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <record model="ir.ui.view" id="sale_order_excise">
-        <field name="name">excise.sale_order_inherit</field>
+    <record model="ir.ui.view" id="sale_order_am_excise">
+        <field name="name">excise.sale_order_am_inherit</field>
         <field name="model">sale.order</field>
         <field name="inherit_id" ref="sale.view_order_form"/>
         <field name="arch" type="xml">
@@ -12,8 +12,8 @@
         </field>
     </record>
 
-    <record model="ir.ui.view" id="sale_order_excise">
-        <field name="name">excise.sale_order_inherit</field>
+    <record model="ir.ui.view" id="sale_order_jogcim_excise">
+        <field name="name">excise.sale_order_jogcim_inherit</field>
         <field name="model">sale.order</field>
         <field name="inherit_id" ref="sale.view_order_form"/>
         <field name="arch" type="xml">
