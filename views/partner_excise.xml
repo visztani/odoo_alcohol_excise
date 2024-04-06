@@ -6,7 +6,7 @@
             <field name="model">res.partner</field>
             <field name="inherit_id" ref="product.product_template_form_view"/>
             <field name="arch" type="xml">
-                <page name="invoicing" position="after">
+                <page name="sales_purchases" position="after">
                     <page name="excise" string="Excise">
                         <group name="excise" string="Excise">
                             <label for="excise_active"/>
