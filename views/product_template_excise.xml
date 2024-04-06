@@ -13,6 +13,24 @@
                             <div class="o_row" name="excise_active_row">
                                 <field name="excise_active" string="Track Excise" widget="boolean_toggle"/>
                             </div>
+                             <p>
+                            <div class="o_row" name="excise_fajtakod_row" attrs="{'invisible':[('excise_active', '=', False)]}">
+                                <label for="excise_fajtakod"/>
+                                <field name="excise_fajtakod" string="Fajtakód" help="Fajtakód of product"/>
+                            </div>
+                            </p>
+                            <p>
+                            <div class="o_row" name="excise_knkod_row" attrs="{'invisible':[('excise_active', '=', False)]}">
+                                <label for="excise_knkod"/>
+                                <field name="excise_knkod" string="KN kód" help="Common Nomenclature Code"/>
+                            </div>
+                            </p>
+                            <p>
+                            <div class="o_row" name="excise_guarantee_row" attrs="{'invisible':[('excise_active', '=', False)]}">
+                                <label for="excise_guarantee_needed"/>
+                                <field name="excise_guarantee_needed" string="Guarantee Needed?" help="Check if money guarantee needed for product to stock it"/>
+                            </div>
+                            </p>
                             <p>
                             <div class="o_row" name="excise_abv_row" attrs="{'invisible':[('excise_active', '=', False)]}">
                                 <label for="excise_abv"/>
@@ -20,13 +38,19 @@
                             </div>
                             </p>
                             <p>
-                            <div class="o_row" name="excise_abv_row" attrs="{'invisible':[('excise_active', '=', False)]}">
+                            <div class="o_row" name="excise_hlf_row" attrs="{'invisible':[('excise_active', '=', False)]}">
+                                <label for="excise_hlf"/>
+                                <field name="excise_hlf" string="HLF" help="Hectolitre Percent (% alcohol in product * 100L/)"/>
+                            </div>
+                            </p>
+                            <p>
+                            <div class="o_row" name="excise_category_row" attrs="{'invisible':[('excise_active', '=', False)]}">
                                 <label for="excise_category"/>
                                 <field name="excise_category" string="Excise Category" />
                             </div>
                             </p>
                             <p>
-                            <div class="o_row" name="excise_abv_row" attrs="{'invisible':[('excise_active', '=', False)]}">
+                            <div class="o_row" name="excise_volume_row" attrs="{'invisible':[('excise_active', '=', False)]}">
                                 <label for="excise_volume" />
                                 <field name="excise_volume" string="Excisable Volume (L)" />
                             </div>

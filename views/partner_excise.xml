@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="partner_excise">
+            <field name="name">prartner_excise_inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <page name="invoicing" position="after">
+                    <page name="excise" string="Excise">
+                        <group name="excise" string="Excise">
+                            <label for="excise_active"/>
+                            <div class="o_row" name="excise_active_row">
+                                <field name="excise_partner_active" string="Excise Partner" widget="boolean_toggle"/>
+                            </div>
+                             <p>
+                            <div class="o_row" name="excise_warehouse_no_row" attrs="{'invisible':[('excise_active', '=', False)]}">
+                                <label for="excise_warehouse_no"/>
+                                <field name="excise_partner_warehouse_no" string="Excise Warehouse No." help="Excise WH. No."/>
+                            </div>
+                            </p>
+                            <p>
+                            <div class="o_row" name="excise_nyilvantartasi_szam_row" attrs="{'invisible':[('excise_active', '=', False)]}">
+                                <label for="excise_partner_nyilvantartasi_szam"/>
+                                <field name="excise_partner_nyilvantartasi_szam" string="Trade License No." help="Nyilvántartási szám"/>
+                            </div>
+                            </p>
+                            <p>
+                            <div class="o_row" name="excise_B2C_row" attrs="{'invisible':[('excise_active', '=', False)]}">
+                                <label for="excise_partner_b2c"/>
+                                <field name="excise_partner_b2c" string="B2C Partner?" help="Check if your partner is a B2C partner"/>
+                            </div>
+                            </p>
+                            <p>
+                            <div class="o_row" name="excise_B2B_row" attrs="{'invisible':[('excise_active', '=', False)]}">
+                                <label for="excise_partner_b22"/>
+                                <field name="excise_partner_b2b" string="B2B Partner?" help="Check if your partner is a B2B partner"/>
+                            </div>
+                            </p>
+                        </group>
+                    </page>
+                </page>
+            </field>     
+        </record>
+<!--
+        <record model="ir.ui.view" id="product_product_tree_excise">
+            <field name="name">excise.product_product_tree_inherit</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_tree_view"/>
+            <field name="arch" type="xml">
+                <field name="company_id" position="after">
+                    <field name="excise_volume"/>
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="product_product_variant_easy_edit_view_excise">
+            <field name="name">excise.product_product_tree_inherit</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_variant_easy_edit_view"/>
+            <field name="arch" type="xml">
+                <group name="weight" position="after">                
+                    <group name="excise" string="Excise" attrs="{'invisible':[('type', 'not in', ['product', 'consu'])]}">
+                        <label for="excise_volume"/>
+                        <div class="o_row">
+                            <field name="excise_volume"/>
+                            <span>L</span>
+                        </div>
+                    </group>
+                </group>
+            </field>
+        </record>
+-->
+    </data>
+</odoo>
