@@ -1,4 +1,4 @@
-from odoo import fields, models
+from odoo import _, fields, models, api
 
 class SaleOrderLine(models.Model):
 
