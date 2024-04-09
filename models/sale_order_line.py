@@ -4,7 +4,9 @@ class SaleOrderLine(models.Model):
 
     _inherit = 'sale.order.line'
 
-    total_hlf = fields.Float(string='Line Total HLF', compute='_compute_total_hlf', store=True)
+    excise_sale_order_line_biztositek = fields.Boolean(string='Biztosíték?', related='product_id.excise_guarantee_needed', readonly=True)
+    total_hlf = fields.Float(string='HLF Line', compute='_compute_total_hlf', store=True)
+    excise_line_fajtakod = fields.Char(string='Fajtakód', related='product_id.excise_fajtakod', readonly=True)
 
     @api.depends('product_id', 'product_uom_qty', 'product_id.excise_hlf') # type: ignore
     def _compute_total_hlf(self):

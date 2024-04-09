@@ -15,31 +15,44 @@
 </odoo>
 -->
 <odoo>
-<record model="ir.ui.view" id="sale_order_am_excise">
-        <field name="name">excise.sale_order_am_inherit</field>
-        <field name="model">sale.order</field>
-        <field name="inherit_id" ref="sale.view_order_form"/>
-        <field name="arch" type="xml">
-            <field name="validity_date" position="after">
-                <field name="sale_test"/>
-            </field>
-        </field>
-    </record>
-</odoo>
-<!--
-<?xml version="1.0" encoding="utf-8"?>
-<odoo>
-
     <record model="ir.ui.view" id="sale_order_am_excise">
         <field name="name">excise.sale_order_am_inherit</field>
         <field name="model">sale.order</field>
         <field name="inherit_id" ref="sale.view_order_form"/>
         <field name="arch" type="xml">
             <field name="partner_id" position="after">
+                <field name="excise_jogcimkod"/>
                 <field name="excise_adomennyiseg_kod"/>
+                <field name="excise_sale_order_hlf"/>
             </field>
         </field>
     </record>
+
+    <record model="ir.ui.view" id="view_sale_order_line_form_inherit">
+            <field name="name">sale.order.line.form.inherit</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='order_line']/tree/field[@name='name']" position="after">
+                    <field name="total_hlf"/>
+                    <field name="excise_line_fajtakod"/>
+                </xpath>
+            </field>
+    </record>
+</odoo>
+<!--
+    <record model="ir.ui.view" id="sale_order_line_excise">
+        <field name="name">excise.sale_order_line_total_hlf_inherit</field>
+        <field name="model">sale.order.line</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="total_hlf"/>
+            </field>
+        </field>
+    </record>
+
+
 
     <record model="ir.ui.view" id="sale_order_jogcim_excise">
         <field name="name">excise.sale_order_jogcim_inherit</field>

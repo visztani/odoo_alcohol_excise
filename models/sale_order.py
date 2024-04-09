@@ -10,7 +10,7 @@ class SaleOrder(models.Model):
     #BEKULDESSTATUSZOKJR = [('0','Nem beküldött'), ('1','Beküldött'), ('2','Javított'), ('3','Rontottnak jelölt')]
     #jovedeki_raktar_NAV_fele_bekuldott_e = fields.Selection(string='NAV felé elküldve?', selection=BEKULDESSTATUSZOKJR)
 
-    #@api.depends('order_line', 'order_line.total_hlf') # type: ignore
-    #def _compute_order_line_hlf(self):
-    #    for order in self:
-    #        order.excise_sale_order_hlf = sum(order.order_line.mapped('total_hlf')) 
+    @api.depends('order_line', 'order_line.total_hlf') # type: ignore
+    def _compute_order_line_hlf(self):
+        for order in self:
+            order.excise_sale_order_hlf = sum(order.order_line.mapped('total_hlf')) 
