@@ -35,8 +35,8 @@
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='order_line']/tree/field[@name='name']" position="after">
                     <field name="total_hlf"/>
-                    <field name="excise_so_line_fajtakod"/>
-                    <field name="excise_so_line_biztositek"/>
+                    <field name="excise_line_fajtakod"/>
+                    <field name="excise_sale_order_line_biztositek"/>
                 </xpath>
             </field>
     </record>
