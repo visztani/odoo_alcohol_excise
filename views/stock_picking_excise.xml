@@ -21,6 +21,9 @@
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='product_id']" position="after">
                     <field name="total_hlf"/>
+                    <field name="excise_move_fajtakod"/>
+                    <field name="excise_move_knkod"/>
+                    <field name="excise_move_guarantee"/>
                 </xpath>
             </field>
         </record>

@@ -17,6 +17,7 @@
         'views/excise_move_views.xml',
         'views/sale_order_view_excise.xml',
         'views/partner_excise.xml',
+        'reports/delivery_slip.xml',
         'security/ir.model.access.csv',
         'data/excise_category_data.xml',
         'data/excise_category_rate_data.xml',
