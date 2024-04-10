@@ -34,7 +34,7 @@ class StockMove(models.Model):
         _inherit = "stock.move.line"
 
     
-        total_hlf = fields.Float(string='HLF Line', compute='_compute_total_hlf', store=True)
+        excise_move_line_total_hlf = fields.Float(string='HLF Line', compute='_compute_total_hlf', store=True)
         excise_move_line_fajtakod = fields.Char(string='Fajtakód', related='product_id.excise_fajtakod', readonly=True)
         excise_move_line_knkod = fields.Char(string='KN kód', related='product_id.excise_knkod', readonly=True)
         excise_move_line_guarantee = fields.Boolean(string='Biztosíték?', related='product_id.excise_guarantee_needed', readonly=True)
@@ -42,5 +42,5 @@ class StockMove(models.Model):
         @api.depends('product_id', 'qty_done', 'product_id.excise_hlf') # type: ignore
         def _compute_total_hlf(self):
             for line in self:
-                line.total_hlf = line.qty_done * line.product_id.excise_hlf
+                line.excise_move_line_total_hlf = line.qty_done * line.product_id.excise_hlf
         

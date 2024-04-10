@@ -28,18 +28,20 @@
             </field>
         </record>
 
+<!--
         <record id="view_stock_picking_line_form_extension" model="ir.ui.view">
             <field name="name">stock.move.line.form.extension</field>
             <field name="model">stock.picking</field>
             <field name="inherit_id" ref="stock.view_picking_form"/>
             <field name="arch" type="xml">
-                <xpath expr="//field[@name='reserved_uom_qty']" position="before">
-                    <field name="total_hlf"/>
+                <xpath expr="//field[@name='location_id']" position="before">
+                    <field name="excise_move_line_total_hlf"/>
                     <field name="excise_move_fajtakod"/>
                     <field name="excise_move_knkod"/>
                     <field name="excise_move_guarantee"/>
                 </xpath>
             </field>
         </record>
+-->
     </data>
 </odoo>
