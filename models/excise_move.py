@@ -41,5 +41,9 @@ class excise_move(models.Model):
     excise_category = fields.Many2one('excise.category','Excise Category',readonly=True)
     excise_rate = fields.Monetary('Rate',readonly=True)
     excise_amount_tax = fields.Monetary(string='Excise Amount', readonly=True)
-    excise_payable = fields.Monetary(string='Total Excise Amount.',help='Total excise payable after releifs (e.g. samll brewers allowance)',readonly=True)
+    excise_payable = fields.Monetary(string='Total Excise Amount.',help='Total excise payable after releifs (e.g. small brewers allowance)',readonly=True)
+
+    excise_hlf = fields.Float('HLF', help='HLF', readonly=True)
+    excise_knkod = fields.Char('KN kód', help='KN', readonly=True)
+    excise_fajtakod = fields.Char('Fajtakód', help='Fajtakod', readonly=True)
 
