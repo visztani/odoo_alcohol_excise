@@ -29,6 +29,7 @@ class StockMove(models.Model):
            return True
         return False
     
+    
 
     class StockMoveLine(models.Model):
         _inherit = "stock.move.line"
