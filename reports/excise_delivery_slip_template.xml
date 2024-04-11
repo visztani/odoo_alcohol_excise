@@ -5,10 +5,46 @@
                 <t t-call="web.external_layout">
                     <div class="page">
                         <div class="text-center">
-                            <h1>Excise Delivery Slip / Szállítólevél</h1>
+                            <h1>Jövedéki Szállítólevél</h1>
                         </div>
-                        <h3>Customer:
+                        <h3>Bizonylatszám:
                             <span t-field="o.name"/>
+                        
+                            Dátum:
+                            <span t-field="o.date"/>
+
+                            Címzett:
+                            <span t-field="o.partner_id.name"/>
+
+                            Szállítsási cím:
+                            <span t-field="o.partner_id.zip"/> 
+                            <span t-field="o.partner_id.city"/> 
+                            <span t-field="o.partner_id.street"/>
+
+                            Adószám: 
+                            <span t-field="o.partner_id.vat"/>
+
+                            Nyilvántartási szám:
+                            <span t-field="o.partner_id.excise_partner_nyilvantartasi_szam"/>             
+
+                            Feladó:
+                            <span t-field="o.company_id.name"/>
+
+                            Adómennyiség kód:
+                            <span t-field="o.excise_adomennyiseg_kod"/>
+
+                            Jogcímkód:
+                            <span t-field="o.excise_jogcimkod"/>
+
+                            Total HLF:
+                            <span t-field="o.excise_picking_hlf"/>
+
+                            Product:
+                            <span t-field="o.product_id.name"/>
+
+                            Fajtakód:
+                            
+
                         </h3>
                     </div>
                 </t>
