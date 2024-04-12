@@ -3,6 +3,7 @@ from odoo import fields, models, api
 class StockMoveLine(models.Model):
     _inherit = "stock.move.line"
     excise_move_ids = fields.One2many('excise.move', 'stock_move_line_id', string='Excise Moves')
+    
 
     @api.model
     def create(self,values):    
