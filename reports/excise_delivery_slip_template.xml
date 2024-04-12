@@ -1,4 +1,4 @@
-
+<?xml version="1.0" encoding="UTF-8" ?>
 
 <!--
 <template id="form_excise_delivery_slip_report">
@@ -60,31 +60,31 @@
         </t>
     </template>
 </odoo>
-
+<t t-set="o" t-value="o.with_context(lang=o._get_report_lang())" />
 -->
 
-<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <template id="form_excise_delivery_slip_report">
         <t t-call="web.html_container">
             <t t-call="web.external_layout">
                 <t t-foreach="docs" t-as="o">
-                <t t-set="o" t-value="o.with_context(lang=o._get_report_lang())" />
+                
                 <t t-set="partner" t-value="o.partner_id or (o.move_ids and o.move_ids[0].partner_id) or False"/>
 
                 <t t-set="address">
                     <div name="div_outgoing_address">
                         <div name="outgoing_delivery_address"
-                            t-if="o.should_print_delivery_address()">
+                            >
                             <span><strong>Delivery Address:</strong></span>
                             <div t-field="o.move_ids[0].partner_id"
-                                t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}'/>
+                                t-options='{"widget": "contact", "fields": ["address", "name", "phone", "vat"], "no_marker": True, "phone_icons": True}'/>
                         </div>
                         <div name="outgoing_warehouse_address"
-                             t-elif="o.picking_type_id.code != 'internal' and o.picking_type_id.warehouse_id.partner_id">
+                             >
                             <span><strong>Warehouse Address:</strong></span>
                             <div t-field="o.picking_type_id.warehouse_id.partner_id"
-                                t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}'/>
+                                t-options='{"widget": "contact", "fields": ["address", "name", "phone", "vat"], "no_marker": True, "phone_icons": True}'/>
+                            <div t-field="o.picking_type_id.warehouse_id.excise_warehouse_no"/>
                         </div>
                     </div>
                 </t>
@@ -125,11 +125,27 @@
                                 <p t-field="o.scheduled_date"/>
                            </t>
                         </div>
+                        <div class="col-auto" name="div_jogcimkod">
+                            <strong>Jogcímkód:</strong>
+                            <p t-field="o.excise_jogcimkod"/>
+                        </div>
+                        <div class="col-auto" name="div_adomennyiseg_kod">
+                            <strong>Adóm. kód:</strong>
+                            <p t-field="o.excise_adomennyiseg_kod"/>
+                        </div>
+                        <div class="col-auto" name="div_adomennyiseg_kod">
+                            <strong>Rendszám:</strong>
+                            <p t-field="o.excise_car_no"/>
+                        </div>
                     </div>
                     <table class="table table-sm" t-if="o.state!='done'" name="stock_move_table">
                         <thead>
                             <tr>
                                 <th name="th_sm_product"><strong>Product</strong></th>
+                                <th name="th_sm_hlf"><strong>HLF Total</strong></th>
+                                <th name="th_sm_knkod"><strong>KN kód</strong></th>
+                                <th name="th_sm_fajtakod"><strong>Fajtakód</strong></th>
+                                <th name="th_sm_biztositek"><strong>Biztosíték</strong></th>
                                 <th name="th_sm_ordered"><strong>Ordered</strong></th>
                                 <th name="th_sm_quantity"><strong>Delivered</strong></th>
                             </tr>
@@ -142,6 +158,19 @@
                                     <p t-if="move.description_picking != move.product_id.name and move.description_picking != move.product_id.display_name">
                                         <span t-field="move.description_picking"/>
                                     </p>
+                                </td>
+                                <td>
+                                    <span t-field="move.total_hlf"/>
+                                     HLF
+                                </td>
+                                <td>
+                                    <span t-field="move.excise_move_knkod"/>
+                                </td>
+                                <td>
+                                    <span t-field="move.excise_move_fajtakod"/>
+                                </td>
+                                <td>
+                                    <span t-field="move.excise_move_guarantee"/>
                                 </td>
                                 <td>
                                     <span t-field="move.product_uom_qty"/>
@@ -271,6 +300,7 @@
                         </div>
                     </div>
                 </div>
+            </t>
             </t>
          </t>
     </template>

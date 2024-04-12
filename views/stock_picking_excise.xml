@@ -9,6 +9,7 @@
                 <xpath expr="//field[@name='partner_id']" position="after">
                     <field name="excise_adomennyiseg_kod"/>
                     <field name="excise_jogcimkod"/>
+                    <field name="excise_car_no"/>
                     <field name="excise_picking_hlf"/>
                 </xpath>
             </field>

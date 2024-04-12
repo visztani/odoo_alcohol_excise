@@ -8,6 +8,7 @@
         <field name="arch" type="xml">
             <field name="partner_id" position="after">
                 <field name="excise_warehouse_no"/>
+                <field name="excise_car_number"/>
             </field>
         </field>
     </record>

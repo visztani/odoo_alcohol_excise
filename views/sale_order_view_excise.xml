@@ -23,6 +23,7 @@
             <field name="partner_id" position="after">
                 <field name="excise_jogcimkod"/>
                 <field name="excise_adomennyiseg_kod"/>
+                <field name="excise_car_no"/>
                 <field name="excise_sale_order_hlf"/>
             </field>
         </field>
