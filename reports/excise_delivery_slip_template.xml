@@ -133,12 +133,16 @@
                             <strong>Adóm. kód:</strong>
                             <p t-field="o.excise_adomennyiseg_kod"/>
                         </div>
+                        <div class="col-auto" name="div_total HLF">
+                            <strong>HLF total:</strong>
+                            <p t-field="o.excise_picking_hlf"/>
+                        </div>
                         <div class="col-auto" name="div_adomennyiseg_kod">
                             <strong>Rendszám:</strong>
                             <p t-field="o.excise_car_no"/>
                         </div>
                     </div>
-                    <table class="table table-sm" t-if="o.state!='done'" name="stock_move_table">
+                    <table class="table table-sm" t-if="o.state=='done'" name="stock_move_table">
                         <thead>
                             <tr>
                                 <th name="th_sm_product"><strong>Product</strong></th>
@@ -183,17 +187,23 @@
                             </tr>
                         </tbody>
                     </table>
-                    <table class="table table-sm mt48" t-if="o.move_line_ids and o.state=='done'" name="stock_move_line_table">
+                    <table class="table table-sm mt48" t-if="o.move_line_ids and o.state!='done'" name="stock_move_line_table">
                         <t t-set="has_serial_number" t-value="False"/>
                         <t t-set="has_serial_number" t-value="o.move_line_ids.mapped('lot_id')" groups="stock.group_lot_on_delivery_slip"/>
                         <thead>
                             <tr>
-                                <th name="th_sml_product"><strong>Product</strong></th>
+                                <th name="th_sml_product"><strong>Excise Product</strong></th>
                                 <t name="lot_serial" t-if="has_serial_number">
                                     <th>
                                         Lot/Serial Number
                                     </th>
                                 </t>
+                                <th name="th_sml_hlf" class="text-center">
+                                    <strong>Line HLF</strong>
+                                </th>
+                                <th name="th_sml_knkod" class="text-center">
+                                    <strong>KN Kód</strong>
+                                </th>
                                 <th name="th_sml_qty_ordered" class="text-center" t-if="not has_serial_number">
                                     <strong>Ordered</strong>
                                 </th>
