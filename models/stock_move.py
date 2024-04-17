@@ -15,6 +15,7 @@ class StockMove(models.Model):
         for line in self:
             line.total_hlf = line.product_uom_qty * line.product_id.excise_hlf
     
+    '''
     def _requires_excise_move(self):
         self.ensure_one()
         if not self.product_id.excise_active:
@@ -28,6 +29,23 @@ class StockMove(models.Model):
         if self.location_id.excise_unpaid and not self.location_dest_id.excise_unpaid:
            return True
         return False
+    '''
+
+    def _requires_excise_move(self):
+        for move in self:
+            move.ensure_one()
+            if not move.product_id.excise_active:
+                return False
+            if not move.location_id.excise_unpaid and move.location_dest_id.excise_unpaid:
+                if move.location_id.usage == 'inventory':  # allow stock adjustments
+                    return True
+                raise UserError("You cannot move excisable product from duty paid to duty unpaid")
+            if move.location_id.excise_warehouse_no != move.location_dest_id.excise_warehouse_no:
+                return True
+            if move.location_id.excise_unpaid and not move.location_dest_id.excise_unpaid:
+                return True
+        return False
+
     
     
 
