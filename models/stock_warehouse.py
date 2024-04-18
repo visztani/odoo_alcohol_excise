@@ -27,4 +27,7 @@ class Location(models.Model):
     def _compute_whseno(self):
         for loc in self:
             loc.excise_warehouse_no =  loc.warehouse_id.excise_warehouse_no
+
+    def get_warehouse(self):
+        return self.warehouse_id
             
