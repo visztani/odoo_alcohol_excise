@@ -18,8 +18,9 @@ class StockMoveLine(models.Model):
             'product_id' : sml.product_id.id,       
             #'move_qty' : sml.reserved_qty,
             #'excise_hlf' : sml.product_id.excise_hlf,
-            #'excise_knkod' : sml.product_id.excise_knkod,
-            #'excise_fajtakod' : sml.product_id.excise_fajtakod,
+            'excise_knkod' : sml.product_id.excise_knkod,
+            'excise_fajtakod' : sml.product_id.excise_fajtakod,
+            'move_jogcimkod' : sml.picking_id.excise_jogcimkod,
 
         }
         if sml.qty_done == 0:

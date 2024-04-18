@@ -43,7 +43,12 @@ class excise_move(models.Model):
     excise_amount_tax = fields.Monetary(string='Excise Amount', readonly=True)
     excise_payable = fields.Monetary(string='Total Excise Amount.',help='Total excise payable after releifs (e.g. small brewers allowance)',readonly=True)
 
+    # új mező (pl.move_jogcimkod) esetén itt kell készíteni egy újat, ezt a nevet kell megadni a reportban (excise_move_views.xml: <field name="move_fajtakod"/>) és
+    # ennek a mezőnek kell értéket adni a stock_move_line.py-ban az emvaluesban: 'move_jogcimkod' : sml.picking_id.excise_jogcimkod,
+    # 'move_jogcimkod' : sml.picking_id.excise_jogcimkod, sml -> az egész stock move line objektum, picking_id-> a példányosított stock.picking, amin az excise_jogcimkod szerepel.
+
     excise_hlf = fields.Float('HLF', help='HLF', readonly=True)
     excise_knkod = fields.Char('KN kód', help='KN', readonly=True)
     excise_fajtakod = fields.Char('Fajtakód', help='Fajtakod', readonly=True)
+    move_jogcimkod = fields.Char('Jogcímkód', readonly=True)
 
