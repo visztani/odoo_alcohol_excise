@@ -10,6 +10,8 @@
                 <field name="excise_knkod"/>
                 <field name="excise_fajtakod"/>
                 <field name="move_jogcimkod"/>
+                <field name="move_adomennyisegkod"/>
+                <field name="move_ahk"/>
                 <field name="date"/>
                 <field name="move_reference"/>
                 <field name="move_state"/>

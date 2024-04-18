@@ -21,6 +21,8 @@ class StockMoveLine(models.Model):
             'excise_knkod' : sml.product_id.excise_knkod,
             'excise_fajtakod' : sml.product_id.excise_fajtakod,
             'move_jogcimkod' : sml.picking_id.excise_jogcimkod,
+            'move_adomennyisegkod' : sml.picking_id.excise_adomennyiseg_kod,
+            'move_ahk' : sml.picking_id.excise_ahk,
 
         }
         if sml.qty_done == 0:

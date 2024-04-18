@@ -131,7 +131,7 @@ class StockPicking(models.Model):
             if picking.purchase_id:
                 picking.excise_ahk = picking.purchase_id.excise_ahk
             else:
-                picking.excise_ahk = False
+                picking.excise_ahk = picking.origin
 
 
 
