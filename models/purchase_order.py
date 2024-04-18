@@ -10,6 +10,8 @@ class PurchaseOrder(models.Model):
     #BEKULDESSTATUSZOKJR = [('0','Nem beküldött'), ('1','Beküldött'), ('2','Javított'), ('3','Rontottnak jelölt')]
     #jovedeki_raktar_NAV_fele_bekuldott_e = fields.Selection(string='NAV felé elküldve?', selection=BEKULDESSTATUSZOKJR)
     excise_car_no = fields.Char('Rendszám', default='kocsi1')
+    excise_partner_whno = fields.Char('Partner Excise WH No.', related='partner_id.property_stock_supplier.excise_warehouse_no', readonly=True, store=True);
+    excise_ahk = fields.Char('Admin. Ref. Code')
 
     @api.depends('order_line', 'order_line.total_hlf') # type: ignore
     def _compute_order_line_hlf(self):

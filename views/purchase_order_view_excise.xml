@@ -7,6 +7,8 @@
         <field name="inherit_id" ref="purchase.purchase_order_form"/>
         <field name="arch" type="xml">
             <field name="partner_id" position="after">
+                <field name="excise_partner_whno"/>
+                <field name="excise_ahk"/>
                 <field name="excise_jogcimkod"/>
                 <field name="excise_adomennyiseg_kod"/>
                 <field name="excise_car_no"/>

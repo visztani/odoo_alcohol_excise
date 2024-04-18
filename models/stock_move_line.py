@@ -14,7 +14,7 @@ class StockMoveLine(models.Model):
             'name' : sml.move_id.name,
             'stock_move_line_id' : sml.id,            
             'stock_move_id' : sml.move_id.id,
-            #'company_id' : sml.company_id,
+            'company_id' : sml.company_id,
             'product_id' : sml.product_id.id,       
             #'move_qty' : sml.reserved_qty,
             #'excise_hlf' : sml.product_id.excise_hlf,
