@@ -10,13 +10,13 @@
                     <page name="excise" string="Excise">
                         <group name="excise" string="Excise">
                                 <field name="excise_active" string="Track Excise" widget="boolean_toggle"/>
-                                <field name="excise_fajtakod" string="Fajtakód" help="Fajtakód of product" attrs="{'invisible':[('excise_active', '=', False)]}"/>
-                                <field name="excise_knkod" string="KN kód" help="Common Nomenclature Code" attrs="{'invisible':[('excise_active', '=', False)]}"/>
-                                <field name="excise_guarantee_needed" string="Guarantee Needed?" help="Check if money guarantee needed for product to stock it" attrs="{'invisible':[('excise_active', '=', False)]}"/>
-                                <field name="excise_abv" string="ABV" help="Average By Volume (% alcohol in product)" attrs="{'invisible':[('excise_active', '=', False)]}"/>
-                                <field name="excise_hlf" string="HLF" help="Hectolitre Percent (% alcohol in product * 100L/)" attrs="{'invisible':[('excise_active', '=', False)]}"/>
-                                <field name="excise_category" string="Excise Category" attrs="{'invisible':[('excise_active', '=', False)]}"/>
-                                <field name="excise_volume" string="Excisable Volume (L)" attrs="{'invisible':[('excise_active', '=', False)]}"/>
+                                <field name="excise_fajtakod" string="Fajtakód" help="Fajtakód of product" attrs="{'invisible':[('excise_active', '=', False)], 'required':[('excise_active', '=', True)]}"/>
+                                <field name="excise_knkod" string="KN kód" help="Common Nomenclature Code" attrs="{'invisible':[('excise_active', '=', False)], 'required':[('excise_active', '=', True)]}"/>
+                                <field name="excise_guarantee_needed" string="Guarantee Needed?" help="Check if money guarantee needed for product to stock it" attrs="{'invisible':[('excise_active', '=', False)], 'required':[('excise_active', '=', True)]}"/>
+                                <field name="excise_abv" string="ABV" help="Average By Volume (% alcohol in product)" attrs="{'invisible':[('excise_active', '=', False)], 'required':[('excise_active', '=', True)]}"/>
+                                <field name="excise_hlf" string="HLF" help="Hectolitre Percent (% alcohol in product * 100L/)" attrs="{'invisible':[('excise_active', '=', False)], 'required':[('excise_active', '=', True)]}"/>
+                                <field name="excise_category" string="Excise Category" attrs="{'invisible':[('excise_active', '=', False)], 'required':[('excise_active', '=', True)]}"/>
+                                <field name="excise_volume" string="Excisable Volume (L)" attrs="{'invisible':[('excise_active', '=', False)], 'required':[('excise_active', '=', True)]}"/>
                             
                             <!--
                             <p>

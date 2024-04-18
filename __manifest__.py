@@ -16,6 +16,7 @@
         'views/stock_picking_excise.xml',
         'views/excise_move_views.xml',
         'views/sale_order_view_excise.xml',
+        'views/purchase_order_view_excise.xml',
         'views/partner_excise.xml',
         'reports/excise_delivery_slip.xml',
         'reports/excise_delivery_slip_template.xml',
