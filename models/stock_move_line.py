@@ -37,6 +37,7 @@ class StockMoveLine(models.Model):
             self.env['excise.move'].sudo().create(emvalues)
         return sml
 
+    '''
     @api.model
     def write(self,values):
         super().write(values)
@@ -58,4 +59,23 @@ class StockMoveLine(models.Model):
                     if cat['excise_category'] == em.excise_category.id:
                         em.excise_amount_tax = cat['excise_amount_tax']
         return True
+    '''
 
+    @api.model
+    def write(self, values):
+        for move_line in self:
+            if move_line.qty_done == 0:
+                _qty = move_line.reserved_qty
+            else:
+                _qty = move_line.qty_done
+            excise_result = self.env['excise.category']._calc_excise(move_line.product_id, _qty)
+            super(StockMoveLine, move_line).write(values)
+            for em in move_line.excise_move_ids:
+                if em.move_qty != _qty:
+                    em.move_qty = _qty
+                    em.excise_move_volume = excise_result['excise_move_volume']
+                    em.excise_alcohol = excise_result['excise_alcohol']
+                    for cat in excise_result['excise_categories']:
+                        if cat['excise_category'] == em.excise_category.id:
+                            em.excise_amount_tax = cat['excise_amount_tax']
+        return True
