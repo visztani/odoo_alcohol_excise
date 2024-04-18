@@ -9,16 +9,16 @@
                 <page name="inventory" position="after">
                     <page name="excise" string="Excise">
                         <group name="excise" string="Excise">
-                            <label for="excise_active"/>
-                            <div class="o_row" name="excise_active_row">
                                 <field name="excise_active" string="Track Excise" widget="boolean_toggle"/>
-                            </div>
-                             <p>
-                            <div class="o_row" name="excise_fajtakod_row" attrs="{'invisible':[('excise_active', '=', False)]}">
-                                <label for="excise_fajtakod"/>
-                                <field name="excise_fajtakod" string="Fajtakód" help="Fajtakód of product"/>
-                            </div>
-                            </p>
+                                <field name="excise_fajtakod" string="Fajtakód" help="Fajtakód of product" attrs="{'invisible':[('excise_active', '=', False)]}"/>
+                                <field name="excise_knkod" string="KN kód" help="Common Nomenclature Code" attrs="{'invisible':[('excise_active', '=', False)]}"/>
+                                <field name="excise_guarantee_needed" string="Guarantee Needed?" help="Check if money guarantee needed for product to stock it" attrs="{'invisible':[('excise_active', '=', False)]}"/>
+                                <field name="excise_abv" string="ABV" help="Average By Volume (% alcohol in product)" attrs="{'invisible':[('excise_active', '=', False)]}"/>
+                                <field name="excise_hlf" string="HLF" help="Hectolitre Percent (% alcohol in product * 100L/)" attrs="{'invisible':[('excise_active', '=', False)]}"/>
+                                <field name="excise_category" string="Excise Category" attrs="{'invisible':[('excise_active', '=', False)]}"/>
+                                <field name="excise_volume" string="Excisable Volume (L)" attrs="{'invisible':[('excise_active', '=', False)]}"/>
+                            
+                            <!--
                             <p>
                             <div class="o_row" name="excise_knkod_row" attrs="{'invisible':[('excise_active', '=', False)]}">
                                 <label for="excise_knkod"/>
@@ -55,6 +55,7 @@
                                 <field name="excise_volume" string="Excisable Volume (L)" />
                             </div>
                             </p>
+                        -->
                         </group>
                     </page>
                 </page>
