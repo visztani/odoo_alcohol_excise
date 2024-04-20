@@ -75,9 +75,9 @@ class StockPicking(models.Model):
     _inherit = 'stock.picking'
 
     excise_picking_hlf = fields.Float(string='HLF Total', compute='_compute_picking_line_hlf', store=True)
-    excise_adomennyiseg_kod = fields.Char(string='Adóm. kód', compute='_compute_excise_adomennyiseg_kod', store=True, required=True)
+    excise_adomennyiseg_kod = fields.Char(string='Adóm. kód', compute='_compute_excise_adomennyiseg_kod', store=True)
     JOGCIMKODOK = [('32203','KI Jöv. kisker - 32203'),('20503','BE tagállamból adófelfügesztéssel - 32203'),('32201','KI Magánszemély - 32201'),('32202','KI Jöv. eng. nagyker - 32202'),('0','Nem jövedéki')]
-    excise_jogcimkod = fields.Selection(string='Jogcímkód', selection=JOGCIMKODOK ,compute='_compute_excise_jogcimkod', store=True, required=True)
+    excise_jogcimkod = fields.Selection(string='Jogcímkód', selection=JOGCIMKODOK ,compute='_compute_excise_jogcimkod', store=True)
     excise_car_no = fields.Char(string='Rendszám', compute='_compute_excise_car_no', store=True)
     excise_partner_whno = fields.Char('Partner Excise WH No.', compute='_compute_excise_partner_whno', store=True)
     excise_ahk = fields.Char('Admin. Ref. Code', compute='_compute_excise_ahk', store=True)
