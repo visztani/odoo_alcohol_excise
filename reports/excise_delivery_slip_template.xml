@@ -67,6 +67,10 @@
     <template id="form_excise_delivery_slip_report">
         <t t-call="web.html_container">
             <t t-call="web.external_layout">
+                <div class="page">
+                        <div class="text-center">
+                            <h1>Jövedéki szállítólevél</h1>
+                        </div>
                 <t t-foreach="docs" t-as="o">
                 
                 <t t-set="partner" t-value="o.partner_id or (o.move_ids and o.move_ids[0].partner_id) or False"/>
@@ -162,8 +166,6 @@
                                     <p t-if="move.description_picking != move.product_id.name and move.description_picking != move.product_id.display_name">
                                         <span t-field="move.description_picking"/>
                                     </p>
-                                </td>
-                                <td>
                                 </td>
                                 <td>
                                     <span t-field="move.total_hlf"/>
