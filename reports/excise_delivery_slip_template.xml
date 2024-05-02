@@ -109,7 +109,7 @@
                             </div>
                             <div name="partner_warehouse_address" t-if="partner">
                                 <span><strong>Partner's Warehouse Address:</strong></span>
-                                <div t-field="o.location_id.partner_id"
+                                <div t-field="o.location_id.warehouse_id.partner_id"
                                     t-options='{"widget": "contact", "fields": ["address", "name", "phone", "vat"], "no_marker": True, "phone_icons": True}'/>
                                 <div t-field="o.location_id.excise_warehouse_no"/>
                             </div>
