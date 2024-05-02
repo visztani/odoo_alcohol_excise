@@ -114,7 +114,6 @@
                                 <div t-field="partner.warehouse_id.excise_warehouse_no"/>
                             </div>
                         </div>
-                        </div>
                     </div>
                 </t>
                 <div class="page">
