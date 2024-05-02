@@ -53,4 +53,3 @@ class excise_move(models.Model):
     move_jogcimkod = fields.Char('Jogcímkód', readonly=True)
     move_adomennyisegkod = fields.Char('Adóm. kód', readonly=True)
     move_ahk = fields.Char('ARC', readonly=True)
-
