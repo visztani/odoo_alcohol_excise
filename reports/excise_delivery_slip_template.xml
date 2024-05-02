@@ -78,14 +78,12 @@
 
                 <t t-set="address">
                     <div name="div_outgoing_address">
-                        <div name="outgoing_delivery_address"
-                            >
+                        <div name="outgoing_delivery_address">
                             <span><strong>Delivery Address:</strong></span>
                             <div t-field="o.move_ids[0].partner_id"
                                 t-options='{"widget": "contact", "fields": ["address", "name", "phone", "vat"], "no_marker": True, "phone_icons": True}'/>
                         </div>
-                        <div name="outgoing_warehouse_address"
-                             >
+                        <div name="outgoing_warehouse_address">
                             <span><strong>Warehouse Address:</strong></span>
                             <div t-field="o.picking_type_id.warehouse_id.partner_id"
                                 t-options='{"widget": "contact", "fields": ["address", "name", "phone", "vat"], "no_marker": True, "phone_icons": True}'/>
@@ -109,6 +107,12 @@
                                 <div t-field="partner.commercial_partner_id"
                                      t-options='{"widget": "contact", "fields": ["address", "name", "phone", "vat"], "no_marker": True, "phone_icons": True}'/>
                             </div>
+                            <div name="outgoing_warehouse_address">
+                            <span><strong>Warehouse Address:</strong></span>
+                            <div t-field="o.picking_type_id.warehouse_id.partner_id"
+                                t-options='{"widget": "contact", "fields": ["address", "name", "phone", "vat"], "no_marker": True, "phone_icons": True}'/>
+                            <div t-field="o.picking_type_id.warehouse_id.excise_warehouse_no"/>
+                        </div>
                         </div>
                     </div>
                 </t>
