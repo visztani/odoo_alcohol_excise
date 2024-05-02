@@ -164,6 +164,8 @@
                                     </p>
                                 </td>
                                 <td>
+                                </td>
+                                <td>
                                     <span t-field="move.total_hlf"/>
                                      HLF
                                 </td>
