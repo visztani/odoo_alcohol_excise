@@ -111,7 +111,7 @@
                                 <span><strong>Partner's Warehouse Address:</strong></span>
                                 <div t-field="partner.commercial_partner_id"
                                     t-options='{"widget": "contact", "fields": ["address", "name", "phone", "vat"], "no_marker": True, "phone_icons": True}'/>
-                                <div t-field="o.picking_type_id.location_id.excise_warehouse_no"/>
+                                <div t-field="o.location_id.excise_warehouse_no"/>
                             </div>
                         </div>
                     </div>
