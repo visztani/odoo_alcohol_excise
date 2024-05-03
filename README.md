@@ -1,14 +1,16 @@
-## Alcohol Excise tracking for Odoo
+# Alcohol Excise tracking for Odoo
  
-### Hungarian extension / modification for Tax Warehouses receiving, sending, storing excise products (storing only, no manufacturing) under duty suspension
+## Hungarian extension / modification for Tax Warehouses receiving, sending, storing excise products (storing only, no manufacturing) under duty suspension
 
 ### Követelmények
     
-2016. évi LXViii. Törvény a jövedéki adóról (https://net.jogtar.hu/jogszabaly?docid=a1600068.tv)
-45/2016. (XI. 29.) NGM rendelet a jövedéki adóról szóló 2016. évi LXVIII. törvény egyes rendelkezéseinek végrehajtásáról (https://net.jogtar.hu/jogszabaly?docid=a1600045.ngm)
+[2016. évi LXViii. Törvény a jövedéki adóról](https://net.jogtar.hu/jogszabaly?docid=a1600068.tv)
 
-Jöt. 20.§(1) a) (elektronikus nyilvántartási kötelezettség)
-Vh. rendelet szerinti adattartalom:
+[45/2016. (XI. 29.) NGM rendelet a jövedéki adóról szóló 2016. évi LXVIII. törvény egyes rendelkezéseinek végrehajtásáról](https://net.jogtar.hu/jogszabaly?docid=a1600045.ngm)
+
+__Jöt. 20.§(1) a) (elektronikus nyilvántartási kötelezettség)__
+
+__Vh. rendelet szerinti adattartalom:__
 
     Adóraktári nyilvántartás és az adóraktár Jöt. 24. § szerinti adatszolgáltatásának adattartalma
 
