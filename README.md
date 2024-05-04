@@ -32,17 +32,17 @@ __Jöt. 20.§(1) a) (elektronikus nyilvántartási kötelezettség)__
 
         -   I. Általános adatok
 
-            -   1. Adóraktári telephely engedélyszáma*
+            -   1. __Adóraktári telephely engedélyszáma*__
 
-            -   2. Tárgyidőszak*
+            -   2. __Tárgyidőszak*__
 
-            -   3. Adóraktári készlettípus*
+            -   3. __Adóraktári készlettípus*__
 
-        -   II. Termékkészlet elszámolás (termék megnevezése, jövedéki termék KN-kódja*, jövedéki termék fajtakódja*, termék mennyisége*, [dohánygyártmány esetében kiszerelési egység és kiskereskedelmi eladási ár is]*)
+        -   II. __Termékkészlet elszámolás (termék megnevezése, jövedéki termék KN-kódja*, jövedéki termék fajtakódja*, termék mennyisége*, [dohánygyártmány esetében kiszerelési egység és kiskereskedelmi eladási ár is]*)__
 
             -   1. Nyitókészlet* (kizárólag a 2017. június 30-át követő első adatszolgáltatás alkalmával beküldendő)
                 <details>    
-                    <summary><b>2. Készletnövekedés (bizonylatszám)</b></summary>
+                   <summary><b>2. Készletnövekedés (bizonylatszám)</b></summary>
                     
                 -   2.1. *  Előállított jövedéki termék*
                     -   2.1.1. Bioetanol esetében az alábbi bontásban
@@ -101,7 +101,94 @@ __Jöt. 20.§(1) a) (elektronikus nyilvántartási kötelezettség)__
                 -   2.27. *  A Jöt. 62. § (13) bekezdése szerinti termék átvétele adófelfüggesztés alatt álló készletbe tagállamból*
                 -   2.28. *  A Jöt. 62. § (13) bekezdése szerinti termék átvétele saját adóraktárból*
                 -   2.29. *  Másik tagállamban szabadforgalomba bocsátott jövedéki termék átvétele
-            </details>    
+            </details>
+            
+            <details>
+            <summary><b>3. Készletcsökkenés (bizonylat száma)</b></summary>
+
+            - 3.1. * Jövedéki termék előállításához felhasznált jövedéki termék*
+                - 3.1.1. A Jöt. 3. § (3) bekezdés 22. pontja szerint sörnek minősülő, erjesztést követően előállított még nem késztermék
+            - 3.2. Jövedéki termék vagy nem jövedéki termék előállításához alapanyagként felhasznált nem jövedéki termék
+            - 3.3. ETBE előállításához felhasznált jövedéki termék*
+            - 3.4. A Jöt. 9. § (1) bekezdés a) pontja szerint értékesített jövedéki termék*
+            - 3.5. A Jöt. 9. § (1) bekezdés b) pontja szerint átadott jövedéki termék*
+            - 3.6. A Jöt. 9. § (1) bekezdés c) pont ca) alpontja szerinti célra a mintavételi szabályzat szerint vett minta (helye, időpontja, célja)
+                - 3.6.1. az állami adó- és vámhatóság jelenlétében
+                - 3.6.2. nem az állami adó- és vámhatóság jelenlétében*
+            - 3.7. A Jöt. 9. § (1) bekezdés c) pont cb) alpontja szerint megsemmisítés
+                - 3.7.1. az állami adó- és vámhatóság jelenlétében
+                    - 3.7.1.1. adóraktárból elszállítás révén
+                    - 3.7.1.2. adóraktárban
+                - 3.7.2. nem az állami adó- és vámhatóság jelenlétében*
+                    - 3.7.2.1. adóraktárból elszállítás révén
+                    - 3.7.2.2. adóraktárban
+            - 3.8. Cigarettán kívüli dohánygyártmányok Jöt. 77. § (3) bekezdés b) pontja szerinti zárjegy eltávolítást követő kivezetése az adózott készletből*
+            - 3.9. * A Jöt. 9. § (1) bekezdés e) és f) pontja szerint jövedéki termék olyan károsodása, amelyet az állami adó- és vámhatóság teljes megsemmisülésként vagy helyrehozhatatlan károsodásként elismert (időpont, mód/körülmények, kárenyhítés érdekében tett intézkedés), a Jöt. 9. § (4) bekezdés b) pontja szerint elismert mennyiségű hiány kivételével
+            - 3.10. A Jöt. 112. § (1) bekezdés a) pontja szerint jövedéki termék kiszolgálása*
+            - 3.11. A Jöt. 112. § (1) bekezdés b) pontja szerint jövedéki termék kiszolgálása*
+            - 3.12. A Jöt. 112. § (1) bekezdés c) pont ca) alpontja szerint felhasznált jövedéki termék*
+            - 3.13. A Jöt. 112. § (1) bekezdés c) pont cb) alpontja szerint felhasznált jövedéki termék*
+            - 3.14. A Jöt. 112. § (1) bekezdés c) pont cc) alpontja szerint felhasznált jövedéki termék*
+            - 3.15. A Jöt. 133. § (1) bekezdés e) pontja szerint felhasznált jövedéki termék gyógyszer, gyógyhatású készítmény, gyógyszeranyag, intermedier előállításához*
+            - 3.16. A Jöt. 133. § (1) bekezdés f) pontja szerinti felhasznált jövedéki termék ecet előállításához*
+            - 3.17. A Jöt. 133. § (1) bekezdés g) pontja szerint felhasznált jövedéki termék aroma előállításához*
+            - 3.18. A Jöt. 133. § (1) bekezdés h) pontja szerint felhasznált jövedéki termék csokoládé és egyéb élelmiszer előállításhoz*
+            - 3.19. A Jöt. 133. § (1) bekezdés i) pontja szerint felhasznált jövedéki termék vegyipari, kozmetikai és egyéb, nem emberi fogyasztásra szolgáló termék előállításához*
+            - 3.20. A Jöt. 133. § (1) bekezdés k) és m) pontja szerint felhasznált jövedéki termék teljesen denaturált alkohol előállításához*
+            - 3.21. Terméktávvezeték adóraktárnak vagy adóraktárnak nem minősülő csővezetékes szállításnál adófelfüggesztési eljárás keretében átadott energiatermék*
+            - 3.22. Szabadforgalomba bocsátott jövedéki termék**
+                - 3.22.1. magánszemély részére
+                - 3.22.2. jövedéki engedélyes kereskedő részére (az átvevő neve, címe, engedélyszáma, adószáma, bizonylat száma)
+                - 3.22.3. jövedéki kiskereskedő részére (az átvevő neve, címe, adószáma, bizonylat száma)
+                - 3.22.4. * más tagállamba
+                - 3.22.5. felhasználói engedélyes részére (az átvevő neve, címe, adószáma, engedélyszáma, bizonylat száma)
+                - 3.22.6. nyilvántartásba vett felhasználó részére (az átvevő neve, címe, adószáma, bizonylat száma)
+                - 3.22.7. dohány-kiskereskedelmi ellátó részére (az átvevő neve, címe, adószáma, engedélyszáma, bizonylat száma)
+                - 3.22.8. * 5 liternél vagy 5 kilogrammnál nagyobb kiszerelésű egyéb ellenőrzött ásványolaj Jöt. 7. § (1) bekezdés f) pontja szerinti értékesítése vagy szállítása (az átvevő neve, címe, adószáma, bizonylat száma)
+                - 3.22.9. kisüzemi bortermelő részére (az átvevő neve, címe, adószáma, bizonylat száma)
+                - 3.22.10. légiutas-ellátási tevékenységre (az átvevő neve, címe, adószáma, bizonylat száma)
+                - 3.22.11. 5 liter vagy 5 kilogramm vagy annál kisebb kiszerelésű egyéb ellenőrzött ásványolaj kiszállítása (bizonylat száma, engedélyes esetén az engedélyszám, magánszemélyt kivéve az átvevő neve, címe, adószáma)
+                - 3.22.12. egyéb személy részére (az átvevő neve, címe, adószáma, bizonylat száma)
+                - 3.22.13. * Tagállamba, harmadik országba történő kiszállítás céljából, zárjegy nélkül a Jöt. 62. § (13) bekezdése szerinti termék
+            - 3.23. Szabadforgalomba bocsátott, az adóraktárban adófizetési kötelezettséget eredményező módon elfogyasztott, felhasznált jövedéki termék*
+            - 3.24. Adófelfüggesztési eljárás keretében feladott jövedéki termék
+                - 3.24.1. saját adóraktárba
+                - 3.24.2. nem saját adóraktárba
+                - 3.24.3. tagállamba
+                - 3.24.4. harmadik országba
+                - 3.24.5. másik tagállamba diplomáciai és konzuli képviselet és annak tagjai részére
+                - 3.24.6. másik tagállamba nemzetközi szervezet és annak tagjai részére
+                - 3.24.7. másik tagállamba Észak-atlanti Szerződésben részes állam fegyveres erői, polgári állománya és étterme, kantinja részére
+                - 3.24.8. * másik tagállamba a tagállam közös biztonság- és védelempolitika keretében folytatott uniós tevékenység végrehajtása céljából végzett védelmi feladat ellátásában részt vevő fegyveres erői, polgári állománya és étterme, kantinja részére
+            - 3.25. Termékkészlet-átvezetés biztosítékköteles készletből a Jöt. 21. § (4) bekezdés a) és b) pontja szerinti termékkészletbe (csökkenés)*
+            - 3.26. Termékkészlet átvezetés a Jöt. 21. § (4) bekezdés a) és b) pontja szerinti termékkészletből biztosítékköteles készletbe (csökkenés)*
+            - 3.27. Készletfelvétel során megállapított készlethiány
+                - 3.27.1. az állami adó- és vámhatóság jelenlétében
+                    - 3.27.1.1. adóköteles hiány
+                    - 3.27.1.2. nem adóköteles hiány
+                - 3.27.2. nem az állami adó- és vámhatóság jelenlétében*
+                    - 3.27.2.1. adóköteles hiány
+                    - 3.27.2.2. nem adóköteles hiány
+            - 3.28. Adófizetési kötelezettség alóli mentesülés kapcsán keletkezett, jövedéki terméknek minősülő melléktermék, hulladék
+                - 3.28.1. felhasználása termék előállításhoz
+                - 3.28.2. megsemmisítése
+                - 3.28.3. feladása, átadása
+            - 3.29. Dohánygyártmány kiskereskedelmi eladási ár változása miatti készletátvezetése (csökkenés)*
+            - 3.30. Adózott termék átadása saját adóraktár részére*
+            - 3.31. Jövedéki termék átvezetése KN-kód vagy fajtakód változása esetén (csökkenés)*
+            - 3.32. * A Jöt. 9. § (1) bekezdés n) és o) pontja és a DCA megállapodás XVI. cikke szerint jövedéki termék kiszolgálása**
+            - 3.33. * Adóraktárban végzett felhasználói engedélyes tevékenységhez kiadott termék a Jöt. 24. § (11) bekezdése szerint*
+            - 3.34. *
+            - 3.35. * A Jöt. 62. § (13) bekezdése szerinti termék feladása saját adóraktár részére*
+            - 3.36. * Adóraktárban a Jöt. 3. § (3) bekezdés 1. pontja szerinti alkoholmentesítéssel előállított csendes bor feladása egyszerűsített adóraktár vagy kisüzemi bortermelő részére*
+            - 3.37. * A Jöt. 67. § (1b) bekezdése szerinti jövedéki termék továbbforgalmazása
+                - 3.37.1. tagállamba
+                - 3.37.2. harmadik országba*
+                - 3.37.3. belföldre**
+            - 3.38. * Csővezetékes szállítás keretében az adóraktárban feladott jövedéki termék harmadik országba*
+            </details>
+            
+
 
  ### Original UK module description
  ### Introduction
