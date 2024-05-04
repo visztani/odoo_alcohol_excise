@@ -42,7 +42,7 @@ __Jöt. 20.§(1) a) (elektronikus nyilvántartási kötelezettség)__
 
             -   1. Nyitókészlet* (kizárólag a 2017. június 30-át követő első adatszolgáltatás alkalmával beküldendő)
                 <details>    
-                    <summary><b>2. __Készletnövekedés (bizonylatszám)__ </b></summary>
+                    <summary><b>2. Készletnövekedés (bizonylatszám)</b></summary>
                     
                 -   2.1. *  Előállított jövedéki termék*
                     -   2.1.1. Bioetanol esetében az alábbi bontásban
@@ -66,11 +66,11 @@ __Jöt. 20.§(1) a) (elektronikus nyilvántartási kötelezettség)__
                 -   2.4. Adófizetési kötelezettség alóli mentesülés kapcsán keletkezett, jövedéki terméknek minősülő melléktermék, hulladék
                 -   2.5. Adófelfüggesztési eljárás keretében átvett jövedéki termék
                     -   2.5.1. saját adóraktárból
-                    -   2.5.2. nem saját adóraktárból
-                    -   2.5.3. tagállamból
-                    -   2.5.4. bejegyzett feladótól
+                    -   2.5.2. __nem saját adóraktárból__
+                    -   2.5.3. __tagállamból__
+                    -   2.5.4. __bejegyzett feladótól__
                     -   2.5.5. adófelfüggesztési eljárás keretében történő szállításból visszaszállított
-                -   2.6. *  Adófelfüggesztési eljárás keretében átvett csendes és habzóbor*
+                -   2.6. __*  Adófelfüggesztési eljárás keretében átvett csendes és habzóbor*__
                     -   2.6.1. Egyszerűsített adóraktártól
                     -   2.6.2. Kisüzemi bortermelőtől
                     -   2.6.3. Másik tagállamból a Jöt. 51. §-a szerint
@@ -79,20 +79,20 @@ __Jöt. 20.§(1) a) (elektronikus nyilvántartási kötelezettség)__
                 -   2.9. Terméktávvezeték adóraktártól vagy adóraktárnak nem minősülő csővezetékes szállításból átvett energiatermék*
                 -   2.10. A Jöt. 12. § h) pontja szerinti jövedéki termék visszavétele*
                 -   2.11. Bérfőzetőtől a párlat kiadása nélkül, adózatlanul megvásárolt mennyiség*
-                -   2.12. Beszerzett nem jövedéki termék
+                -   2.12. __Beszerzett nem jövedéki termék__
                 -   2.13. Mintaként vett, de fel nem használt termék*
-                -   2.14. Készletfelvétel során megállapított készlet többlet
+                -   2.14. <span style="color:red">Készletfelvétel során megállapított készlet többlet</span>
                     -   2.14.1. az állami adó- és vámhatóság jelenlétében
                     -   2.14.2. nem az állami adó- és vámhatóság jelenlétében*
                 -   2.15. Termékkészlet átvezetése biztosítékköteles készletből a Jöt. 21. § (4) bekezdés a) és b) pontja szerinti termékkészletbe (növekedés)*
                 -   2.16. Termékkészlet átvezetése a Jöt. 21. § (4) bekezdés a) és b) pontja szerinti termékkészletből biztosítékköteles készletbe (növekedés)*
-                -   2.17. *  Magánfőzőtől átvett párlat*
+                -   2.17. __*  Magánfőzőtől átvett párlat*__
                 -   2.18. Bérfőzetőtől átvett adózott párlat*
                 -   2.19. *  Szabadforgalomból átvett*
                     -   2.19.1. az adóraktár engedélyese által belföldön szabadforgalomba bocsátott jövedéki termék
                     -   2.19.2. egyéb jövedéki termék
                 -   2.20. Dohánygyártmány kiskereskedelmi eladási ár változása miatti készletátvezetése (növekedés)*
-                -   2.21. Szabadforgalomba bocsátott jövedéki termék kiszállítást követő 72 órán belül részben vagy teljes mennyiségben történő visszaszállítása*
+                -   2.21. <span style="color:red">Szabadforgalomba bocsátott jövedéki termék kiszállítást követő 72 órán belül részben vagy teljes mennyiségben történő visszaszállítása*</span>
                 -   2.22. Adózott termék átvétele saját adóraktárból*
                 -   2.23. Jövedéki termék átvezetése KN-kód vagy fajtkód változása esetén (növekedés)*
                 -   2.24. *  A Jöt. 9. § (1) bekezdés a) pontja szerint értékesített jövedéki termék kiszállítást követő 72 órán belül részben vagy teljes mennyiségben történő visszaszállítása
