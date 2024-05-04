@@ -106,16 +106,16 @@ __Jöt. 20.§(1) a) (elektronikus nyilvántartási kötelezettség)__
             <details>
             <summary><b>3. Készletcsökkenés (bizonylat száma)</b></summary>
 
-            - 3.1. * Jövedéki termék előállításához felhasznált jövedéki termék*
-                - 3.1.1. A Jöt. 3. § (3) bekezdés 22. pontja szerint sörnek minősülő, erjesztést követően előállított még nem késztermék
-            - 3.2. Jövedéki termék vagy nem jövedéki termék előállításához alapanyagként felhasznált nem jövedéki termék
+            - 3.1. __* Jövedéki termék előállításához felhasznált jövedéki termék*__
+                - 3.1.1. __A Jöt. 3. § (3) bekezdés 22. pontja szerint sörnek minősülő, erjesztést követően előállított még nem késztermék__
+            - 3.2. __Jövedéki termék vagy nem jövedéki termék előállításához alapanyagként felhasznált nem jövedéki termék__
             - 3.3. ETBE előállításához felhasznált jövedéki termék*
             - 3.4. A Jöt. 9. § (1) bekezdés a) pontja szerint értékesített jövedéki termék*
             - 3.5. A Jöt. 9. § (1) bekezdés b) pontja szerint átadott jövedéki termék*
             - 3.6. A Jöt. 9. § (1) bekezdés c) pont ca) alpontja szerinti célra a mintavételi szabályzat szerint vett minta (helye, időpontja, célja)
                 - 3.6.1. az állami adó- és vámhatóság jelenlétében
                 - 3.6.2. nem az állami adó- és vámhatóság jelenlétében*
-            - 3.7. A Jöt. 9. § (1) bekezdés c) pont cb) alpontja szerint megsemmisítés
+            - 3.7. <span style="color:red">A Jöt. 9. § (1) bekezdés c) pont cb) alpontja szerint megsemmisítés</span>
                 - 3.7.1. az állami adó- és vámhatóság jelenlétében
                     - 3.7.1.1. adóraktárból elszállítás révén
                     - 3.7.1.2. adóraktárban
@@ -136,7 +136,7 @@ __Jöt. 20.§(1) a) (elektronikus nyilvántartási kötelezettség)__
             - 3.19. A Jöt. 133. § (1) bekezdés i) pontja szerint felhasznált jövedéki termék vegyipari, kozmetikai és egyéb, nem emberi fogyasztásra szolgáló termék előállításához*
             - 3.20. A Jöt. 133. § (1) bekezdés k) és m) pontja szerint felhasznált jövedéki termék teljesen denaturált alkohol előállításához*
             - 3.21. Terméktávvezeték adóraktárnak vagy adóraktárnak nem minősülő csővezetékes szállításnál adófelfüggesztési eljárás keretében átadott energiatermék*
-            - 3.22. Szabadforgalomba bocsátott jövedéki termék**
+            - 3.22. __Szabadforgalomba bocsátott jövedéki termék**__
                 - 3.22.1. magánszemély részére
                 - 3.22.2. jövedéki engedélyes kereskedő részére (az átvevő neve, címe, engedélyszáma, adószáma, bizonylat száma)
                 - 3.22.3. jövedéki kiskereskedő részére (az átvevő neve, címe, adószáma, bizonylat száma)
@@ -150,8 +150,8 @@ __Jöt. 20.§(1) a) (elektronikus nyilvántartási kötelezettség)__
                 - 3.22.11. 5 liter vagy 5 kilogramm vagy annál kisebb kiszerelésű egyéb ellenőrzött ásványolaj kiszállítása (bizonylat száma, engedélyes esetén az engedélyszám, magánszemélyt kivéve az átvevő neve, címe, adószáma)
                 - 3.22.12. egyéb személy részére (az átvevő neve, címe, adószáma, bizonylat száma)
                 - 3.22.13. * Tagállamba, harmadik országba történő kiszállítás céljából, zárjegy nélkül a Jöt. 62. § (13) bekezdése szerinti termék
-            - 3.23. Szabadforgalomba bocsátott, az adóraktárban adófizetési kötelezettséget eredményező módon elfogyasztott, felhasznált jövedéki termék*
-            - 3.24. Adófelfüggesztési eljárás keretében feladott jövedéki termék
+            - 3.23. <span style="color:red">Szabadforgalomba bocsátott, az adóraktárban adófizetési kötelezettséget eredményező módon elfogyasztott, felhasznált jövedéki termék*</span>
+            - 3.24. __Adófelfüggesztési eljárás keretében feladott jövedéki termék__
                 - 3.24.1. saját adóraktárba
                 - 3.24.2. nem saját adóraktárba
                 - 3.24.3. tagállamba
@@ -162,20 +162,20 @@ __Jöt. 20.§(1) a) (elektronikus nyilvántartási kötelezettség)__
                 - 3.24.8. * másik tagállamba a tagállam közös biztonság- és védelempolitika keretében folytatott uniós tevékenység végrehajtása céljából végzett védelmi feladat ellátásában részt vevő fegyveres erői, polgári állománya és étterme, kantinja részére
             - 3.25. Termékkészlet-átvezetés biztosítékköteles készletből a Jöt. 21. § (4) bekezdés a) és b) pontja szerinti termékkészletbe (csökkenés)*
             - 3.26. Termékkészlet átvezetés a Jöt. 21. § (4) bekezdés a) és b) pontja szerinti termékkészletből biztosítékköteles készletbe (csökkenés)*
-            - 3.27. Készletfelvétel során megállapított készlethiány
+            - 3.27. <span style="color:red">Készletfelvétel során megállapított készlethiány
                 - 3.27.1. az állami adó- és vámhatóság jelenlétében
                     - 3.27.1.1. adóköteles hiány
                     - 3.27.1.2. nem adóköteles hiány
                 - 3.27.2. nem az állami adó- és vámhatóság jelenlétében*
                     - 3.27.2.1. adóköteles hiány
-                    - 3.27.2.2. nem adóköteles hiány
+                    - 3.27.2.2. nem adóköteles hiány<span>
             - 3.28. Adófizetési kötelezettség alóli mentesülés kapcsán keletkezett, jövedéki terméknek minősülő melléktermék, hulladék
                 - 3.28.1. felhasználása termék előállításhoz
                 - 3.28.2. megsemmisítése
                 - 3.28.3. feladása, átadása
             - 3.29. Dohánygyártmány kiskereskedelmi eladási ár változása miatti készletátvezetése (csökkenés)*
             - 3.30. Adózott termék átadása saját adóraktár részére*
-            - 3.31. Jövedéki termék átvezetése KN-kód vagy fajtakód változása esetén (csökkenés)*
+            - 3.31. @Jövedéki termék átvezetése KN-kód vagy fajtakód változása esetén (csökkenés)*</span>
             - 3.32. * A Jöt. 9. § (1) bekezdés n) és o) pontja és a DCA megállapodás XVI. cikke szerint jövedéki termék kiszolgálása**
             - 3.33. * Adóraktárban végzett felhasználói engedélyes tevékenységhez kiadott termék a Jöt. 24. § (11) bekezdése szerint*
             - 3.34. *
