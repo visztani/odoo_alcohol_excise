@@ -8,15 +8,9 @@
 
 [45/2016. (XI. 29.) NGM rendelet a jövedéki adóról szóló 2016. évi LXVIII. törvény egyes rendelkezéseinek végrehajtásáról](https://net.jogtar.hu/jogszabaly?docid=a1600045.ngm)
 
-- list1
-    - list2
-      <details>
-      <summary><b>list3</b></summary>
-        
-        - list4
-        - list5
-        - list6
-      </details>
+- [x] #739
+- [ ] https://github.com/octo-org/octo-repo/issues/740
+- [ ] Add delight to the experience when all tasks are complete :tada:
 
 __Jöt. 20.§(1) a) (elektronikus nyilvántartási kötelezettség)__
 
