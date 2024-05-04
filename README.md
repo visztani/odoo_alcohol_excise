@@ -2,15 +2,21 @@
  
 ## Hungarian extension / modification for Tax Warehouses receiving, sending, storing excise products (storing only, no manufacturing) under duty suspension
 
+### To-do tasks
+
+- [ ] Fordítás
+- [ ] Gyártás modul
+- [ ] 2.14. Készletfelvétel során megállapított készlet többlet
+- [ ] 2.21. Szabadforgalomba bocsátott jövedéki termék kiszállítást követő 72 órán belül részben vagy teljes mennyiségben történő visszaszállítása*
+- [ ] 3.7. A Jöt. 9. § (1) bekezdés c) pont cb) alpontja szerint megsemmisítés
+- [ ] 3.23. Szabadforgalomba bocsátott, az adóraktárban adófizetési kötelezettséget eredményező módon elfogyasztott, felhasznált jövedéki termék*
+- [ ] 3.27. Készletfelvétel során megállapított készlethiány
+
 ### Követelmények
     
 [2016. évi LXViii. Törvény a jövedéki adóról](https://net.jogtar.hu/jogszabaly?docid=a1600068.tv)
 
 [45/2016. (XI. 29.) NGM rendelet a jövedéki adóról szóló 2016. évi LXVIII. törvény egyes rendelkezéseinek végrehajtásáról](https://net.jogtar.hu/jogszabaly?docid=a1600045.ngm)
-
-- [x] #739
-- [ ] https://github.com/octo-org/octo-repo/issues/740
-- [ ] Add delight to the experience when all tasks are complete :tada:
 
 __Jöt. 20.§(1) a) (elektronikus nyilvántartási kötelezettség)__
 
