@@ -73,11 +73,11 @@
                 <t t-set="partner" t-value="o.partner_id or (o.move_ids and o.move_ids[0].partner_id) or False"/>
 
                 <div class="page">
-                    <div name="szallitoi_bizonylat" t-if="o.picking_type_id.code=='incoming' and partner">
+                    <div name="szallitoi_bizonylat" t-if="o.picking_type_id.code=='incoming'">
                         <span><strong>Szállítói bizonylat:</strong></span>
                         <t t-set="show_bizonylat" t-value="True" />
                     </div>
-                    <div name="szallitolevel" t-if="o.picking_type_id.code=='outgoing' and partner">
+                    <div name="szallitolevel" t-if="o.picking_type_id.code=='outgoing'">
                         <span><strong>Jövedéki szállítólevél</strong></span>
                         <t t-set="show_szallitolevel" t-value="True" />
                     </div>
@@ -124,9 +124,9 @@
                     </div>
                 </t>
                 <div class="page">
-                    <h2>
+                    <h1>
                         <span t-field="o.name"/>
-                    </h2>
+                    </h1>
                     <div class="row mt32 mb32">
                         <div t-if="o.origin" class="col-auto" name="div_origin">
                             <strong>Order:</strong>
