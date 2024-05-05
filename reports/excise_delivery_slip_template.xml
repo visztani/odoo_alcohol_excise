@@ -77,7 +77,7 @@
                         <t t-set="show_szallitolevel" t-value="True" />
                     </div>
                 </div>
-                <t t-foreach="docs" t-as="o">
+                <t t-foreach="docs" t-as="o"> 
                 
                 <t t-set="partner" t-value="o.partner_id or (o.move_ids and o.move_ids[0].partner_id) or False"/>
 
