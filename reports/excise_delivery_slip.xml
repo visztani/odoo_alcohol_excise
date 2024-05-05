@@ -2,7 +2,7 @@
     <record id="action_report_excise_delivery_slip_form" model="ir.actions.report">
         <field name="name">Delivery Slip / Szállítólevél</field>
         <field name="model">stock.picking</field>
-        <field name="report_type">qweb-pdf</field>
+        <field name="report_type">qweb-html</field>
         <field name="report_name">odoo_alcohol_excise.form_excise_delivery_slip_report</field>
         <field name="report_file">odoo_alcohol_excise.form_delivery_slip_report</field>
         <field name="binding_model_id" ref="model_stock_picking"/>
