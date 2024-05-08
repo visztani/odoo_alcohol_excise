@@ -11,6 +11,7 @@
 - [ ] 3.7. A Jöt. 9. § (1) bekezdés c) pont cb) alpontja szerint megsemmisítés
 - [ ] 3.23. Szabadforgalomba bocsátott, az adóraktárban adófizetési kötelezettséget eredményező módon elfogyasztott, felhasznált jövedéki termék*
 - [ ] 3.27. Készletfelvétel során megállapított készlethiány
+- [ ] ÁNYK export
 
 ### Követelmények
     
