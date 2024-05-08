@@ -41,7 +41,7 @@ class StockMove(models.Model):
                     return True
                 if move.location_id.usage == 'customer':  # Check if move is from a customer location to another location
                     return True
-                raise UserError("You cannot move excisable product from duty paid to duty unpaid")
+                raise UserError("You cannot move excisable product from duty paid to duty unpaid. Location type: {move.location_id.usage}")
             if move.location_id.excise_warehouse_no != move.location_dest_id.excise_warehouse_no:
                 return True
             if move.location_id.excise_unpaid and not move.location_dest_id.excise_unpaid:
