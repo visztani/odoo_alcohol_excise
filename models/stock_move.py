@@ -39,6 +39,9 @@ class StockMove(models.Model):
             if not move.location_id.excise_unpaid and move.location_dest_id.excise_unpaid:
                 if move.location_id.usage == 'inventory':  # allow stock adjustments
                     return True
+                if move.location_id.usage == 'customer' and move.location_dest_id.usage != 'customer':
+                    # Check if move is from a customer location to another location
+                    return True
                 raise UserError("You cannot move excisable product from duty paid to duty unpaid")
             if move.location_id.excise_warehouse_no != move.location_dest_id.excise_warehouse_no:
                 return True
