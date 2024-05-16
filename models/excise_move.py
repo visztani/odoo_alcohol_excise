@@ -56,6 +56,7 @@ class excise_move(models.Model):
 
     @api.model
     def unlink(self):
+        print("DELETE.................................")
         _logger.info('Attempt to delete excise.move record.')
         res= super(excise_move, self).unlink()
         raise UserError(_('You cannot delete an excise move record.'))
