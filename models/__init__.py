@@ -11,7 +11,7 @@ from . import stock_move
 from . import excise_move
 from . import stock_move_line
 
-#_logger.info('ExciseMove model loaded.')
+#_logger.info('excise_move model loaded.')
 
 #@api.model
 #def create(self, vals):
