@@ -2,6 +2,9 @@ import logging
 from odoo import api, fields, models
 from odoo.exceptions import UserError
 
+
+_logger = logging.getLogger(__name__)
+
 class excise_move(models.Model):
     _name = 'excise.move'
     _description = 'Excise Line'
