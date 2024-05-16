@@ -1,4 +1,6 @@
+import logging
 from odoo import api, fields, models
+from odoo.exceptions import UserError
 
 class excise_move(models.Model):
     _name = 'excise.move'
