@@ -18,6 +18,6 @@ def create(self, vals):
     _logger.info('Creating excise.move record with values: %s', vals)
     return super(excise_move, self).create(vals)
 
-def unlink(self, vals):
-    _logger.info('deleting excise.move record with values: %s', vals)
-    return super(excise_move, self).unlink(vals)
+#def unlink(self, vals):
+#    _logger.info('deleting excise.move record with values: %s', vals)
+#    return super(excise_move, self).unlink(vals)
