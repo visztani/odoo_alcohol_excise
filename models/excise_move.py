@@ -59,7 +59,7 @@ class excise_move(models.Model):
     move_adomennyisegkod = fields.Char('Adóm. kód', readonly=True)
     move_ahk = fields.Char('ARC', readonly=True)
 
-    @api.model
+    @api.multi
     def unlink(self):
         print("DELETE.................................")
         _logger.info('Attempt to delete excise.move record.')
