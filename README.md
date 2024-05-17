@@ -6,7 +6,9 @@
 
 - [x] Excise Move törlés tiltása (reporting alatt)
 - [ ] Reporting alatt HLF megejelenítése
-- [ ] ÁNYK export
+- [ ] ÁNYK export napi jelentés (J28)
+- [ ] ÁNYK havi jelentés (BEV J02)
+- [ ] ÁNYK I815M export
 - [ ] Excise Category alatt a kategóriában az "additional category " tiltása, mivel dupla move line jelenséghez vezet
 - [ ] Fordítás
 - [ ] 2.14. Készletfelvétel során megállapított készlet többlet
