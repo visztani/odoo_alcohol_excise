@@ -60,7 +60,7 @@ class excise_move(models.Model):
     move_ahk = fields.Char('ARC', readonly=True)
 
     @api.model
-    def unlink(self):
+    def unlink(self, values):
         print("DELETE.................................")
         _logger.info('Attempt to delete excise.move record.')
         raise UserError(_('You cannot delete an excise move record.'))
