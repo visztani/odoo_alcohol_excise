@@ -43,10 +43,10 @@ class StockMoveLine(models.Model):
             del emvalues['excise_categories']
             for cat in excise_result['excise_categories']:
                 emvalues.update(cat)
-                _logger.info('Creating excise move with values: %s', emvalues)
+                _logger.info('Creating excise move with values LINE 46: %s', emvalues)
                 self.env['excise.move'].sudo().create(emvalues)
         else:
-            _logger.info('Creating excise move with values: %s', emvalues)
+            _logger.info('Creating excise move with values LINE 49: %s', emvalues)
             self.env['excise.move'].sudo().create(emvalues)
 
         return sml
