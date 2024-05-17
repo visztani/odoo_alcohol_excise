@@ -59,12 +59,10 @@ class excise_move(models.Model):
     move_adomennyisegkod = fields.Char('Adóm. kód', readonly=True)
     move_ahk = fields.Char('ARC', readonly=True)
 
-'''
+
     @api.model
     def unlink(self, values):
         # print("DELETE.................................") # consolra kinyomtatja
         #_logger.info('Attempt to delete excise.move record.') # logba beleírja
         raise UserError(_('You cannot delete an excise move record.')) # alsóvonás a fordíthatóság miatt van, hozzá kell adni az elesén: from odoo import _, api, fields, models
         #return super(excise_move, self).unlink()
-
-'''
