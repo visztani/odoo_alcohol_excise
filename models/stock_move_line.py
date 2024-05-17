@@ -62,7 +62,7 @@ class StockMoveLine(models.Model):
             excise_result = self.env['excise.category']._calc_excise(move_line.product_id, _qty)
             _logger.debug('Excise result calculated for write: %s', excise_result)
 
-            result = super(StockMoveLine, move_line).write(values)
+            super(StockMoveLine, move_line).write(values)
             _logger.debug('Stock Move Line with ID %s updated', move_line.id)
 
             for em in move_line.excise_move_ids:
@@ -74,7 +74,7 @@ class StockMoveLine(models.Model):
                     for cat in excise_result['excise_categories']:
                         if cat['excise_category'] == em.excise_category.id:
                             em.excise_amount_tax = cat['excise_amount_tax']
-        return result
+        return True
 
     @api.model
     def _create_excise_move(self, sml):
