@@ -5,14 +5,14 @@
 ### To-do tasks
 
 - [x] Excise Move törlés tiltása (reporting alatt)
+- [ ] ÁNYK export
 - [ ] Fordítás
-- [ ] Gyártás modul
 - [ ] 2.14. Készletfelvétel során megállapított készlet többlet
 - [ ] 2.21. Szabadforgalomba bocsátott jövedéki termék kiszállítást követő 72 órán belül részben vagy teljes mennyiségben történő visszaszállítása*
 - [ ] 3.7. A Jöt. 9. § (1) bekezdés c) pont cb) alpontja szerint megsemmisítés
 - [ ] 3.23. Szabadforgalomba bocsátott, az adóraktárban adófizetési kötelezettséget eredményező módon elfogyasztott, felhasznált jövedéki termék*
 - [ ] 3.27. Készletfelvétel során megállapított készlethiány
-- [ ] ÁNYK export
+- [ ] Gyártás modul
 
 ### Követelmények
     
