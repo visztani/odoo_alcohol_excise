@@ -9,6 +9,7 @@ class StockMoveLine(models.Model):
     def create(self,values):    
         sml = super().create(values)
         if not sml.move_id._requires_excise_move():
+            print "_____12____"
             return sml
         emvalues = {
             'name' : sml.move_id.name,
