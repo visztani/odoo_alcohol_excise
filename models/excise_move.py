@@ -63,5 +63,5 @@ class excise_move(models.Model):
     def unlink(self, values):
         print("DELETE.................................")
         _logger.info('Attempt to delete excise.move record.')
-        raise UserError(_('You cannot delete an excise move record.'))
+        raise UserError(_('You cannot delete an excise move record.')) # alsóvonás a fordíthatóság miatt van, hozzá kell adni az elesén: from odoo import _, api, fields, models
         #return super(excise_move, self).unlink()
