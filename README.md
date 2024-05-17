@@ -4,7 +4,7 @@
 
 ### To-do tasks
 
-- [ ] Excise Move törlés tiltása
+- [x] Excise Move törlés tiltása (reporting alatt)
 - [ ] Fordítás
 - [ ] Gyártás modul
 - [ ] 2.14. Készletfelvétel során megállapított készlet többlet
