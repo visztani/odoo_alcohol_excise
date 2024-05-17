@@ -7,6 +7,7 @@
 - [x] Excise Move törlés tiltása (reporting alatt)
 - [ ] Reporting alatt HLF megejelenítése
 - [ ] ÁNYK export
+- [ ] Excise Category alatt a kategóriában az "additional category " tiltása, mivel dupla move line jelenséghez vezet
 - [ ] Fordítás
 - [ ] 2.14. Készletfelvétel során megállapított készlet többlet
 - [ ] 2.21. Szabadforgalomba bocsátott jövedéki termék kiszállítást követő 72 órán belül részben vagy teljes mennyiségben történő visszaszállítása*
