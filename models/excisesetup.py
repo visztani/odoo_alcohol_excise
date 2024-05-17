@@ -29,7 +29,7 @@ class excise_category(models.Model):
             cat.rate = excise_rates.get(cat.id) or 0
 
     def _get_rates(self,  date):
-        self.env['excise.category.rate'].flush(['rate', 'category_id', 'name'])
+        self.env['excise.category.rate'].flush_recordset(['rate', 'category_id', 'name'])
         query = """SELECT ec.id,
                     COALESCE((SELECT ecr.rate FROM excise_category_rate ecr
                         WHERE category_id = ec.id AND ecr.name <= %s
