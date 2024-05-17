@@ -5,6 +5,7 @@
 ### To-do tasks
 
 - [x] Excise Move törlés tiltása (reporting alatt)
+- [ ] Reporting alatt HLF megejelenítése
 - [ ] ÁNYK export
 - [ ] Fordítás
 - [ ] 2.14. Készletfelvétel során megállapított készlet többlet
