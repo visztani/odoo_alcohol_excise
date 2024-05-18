@@ -1,4 +1,5 @@
 from odoo import _, api, fields, models
+import logging
 
 class StockPicking(models.Model):
     _inherit = 'stock.picking'
@@ -24,10 +25,10 @@ class StockPicking(models.Model):
     def _compute_excise_stock_type(self):
         for record in self:
             if record.product_id:
-                _logger.info('Computing excise stock type for product ID %s', record.product_id.id)
+                #_logger.info('Computing excise stock type for product ID %s', record.product_id.id)
                 record.excise_stock_type = record.product_id.excise_stock_type
-            else:
-                _logger.info('No product associated with this excise move record')
+            #else:
+                #_logger.info('No product associated with this excise move record')
 
     @api.depends('move_ids_without_package', 'move_ids_without_package.total_hlf')
     def _compute_picking_line_hlf(self):
