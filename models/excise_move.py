@@ -67,19 +67,19 @@ class excise_move(models.Model):
     @api.depends('move_location_id', 'move_location_dest_id', 'stock_move_id')
     def _compute_addresses(self):
         for record in self:
-            _logger.debug('Computing addresses for record ID %s', record.id)
+            _logger.info('Computing addresses for record ID %s', record.id)
             if record.move_location_id.usage == 'internal':
-                _logger.debug('Source location is internal for record ID %s', record.id)
+                _logger.info('Source location is internal for record ID %s', record.id)
                 record.move_source_address = record.stock_move_id.company_id.partner_id.id
             else:
-                _logger.debug('Source location is external for record ID %s', record.id)
+                _logger.info('Source location is external for record ID %s', record.id)
                 record.move_source_address = record.stock_move_id.partner_id.id
             
             if record.move_location_dest_id.usage == 'internal':
-                _logger.debug('Destination location is internal for record ID %s', record.id)
+                _logger.info('Destination location is internal for record ID %s', record.id)
                 record.move_destination_address = record.stock_move_id.company_id.partner_id.id
             else:
-                _logger.debug('Destination location is external for record ID %s', record.id)
+                _logger.info('Destination location is external for record ID %s', record.id)
                 record.move_destination_address = record.stock_move_id.partner_id.id
 
 
