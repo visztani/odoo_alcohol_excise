@@ -68,14 +68,14 @@ class excise_move(models.Model):
     def _compute_addresses(self):
         for record in self:
             if record.move_location_id.usage == 'internal':
-                record.source_address = record.stock_move_id.company_id.partner_id.id
+                record.move_source_address = record.stock_move_id.company_id.partner_id.id
             else:
-                record.source_address = record.stock_move_id.partner_id.id
+                record.move_source_address = record.stock_move_id.partner_id.id
             
             if record.move_location_dest_id.usage == 'internal':
-                record.destination_address = record.stock_move_id.company_id.partner_id.id
+                record.move_destination_address = record.stock_move_id.company_id.partner_id.id
             else:
-                record.destination_address = record.stock_move_id.partner_id.id
+                record.move_destination_address = record.stock_move_id.partner_id.id
 
 
     @api.model
