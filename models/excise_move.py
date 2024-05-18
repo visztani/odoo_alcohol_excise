@@ -41,6 +41,9 @@ class excise_move(models.Model):
                 related='stock_move_id.location_dest_id', readonly=True)
     move_partner_id = fields.Many2one('res.partner', 'Destination Address ',
                 related='stock_move_id.partner_id', readonly=True)
+    source_address = fields.Many2one('res.partner', string='Source Address', compute='_compute_addresses', store=True)
+    destination_address = fields.Many2one('res.partner', string='Destination Address', compute='_compute_addresses', store=True)
+
 
     excise_abv = fields.Float('ABV',help='Average By Volume (% Alcohol)',readonly=True)
     excise_move_volume = fields.Float('Excisable Volume (L)', help='Volume being moved for the basis of the Excise calculation')
@@ -60,6 +63,20 @@ class excise_move(models.Model):
     move_jogcimkod = fields.Char('Jogcímkód', readonly=True)
     move_adomennyisegkod = fields.Char('Adóm. kód', readonly=True)
     move_ahk = fields.Char('ARC', readonly=True)
+
+    @api.depends('move_location_id', 'move_location_dest_id', 'stock_move_id')
+    def _compute_addresses(self):
+        for record in self:
+            if record.move_location_id.usage == 'internal':
+                record.source_address = record.stock_move_id.company_id.partner_id.id
+            else:
+                record.source_address = record.stock_move_id.partner_id.id
+            
+            if record.move_location_dest_id.usage == 'internal':
+                record.destination_address = record.stock_move_id.company_id.partner_id.id
+            else:
+                record.destination_address = record.stock_move_id.partner_id.id
+
 
     @api.model
     def unlink(self, values):
