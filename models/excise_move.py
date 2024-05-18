@@ -67,26 +67,26 @@ class excise_move(models.Model):
     @api.depends('move_location_id', 'move_location_dest_id', 'stock_move_id')
     def _compute_addresses(self):
         for record in self:
-            _logger.info('Computing addresses for record ID %s', record.id)
+            #_logger.info('Computing addresses for record ID %s', record.id)
             if record.move_location_id.usage == 'internal':
-                _logger.info('Source location is internal for partner ID %s', record.stock_move_id.company_id.partner_id.id)
+                #_logger.info('Source location is internal for partner ID %s', record.stock_move_id.company_id.partner_id.id)
                 record.move_source_address = record.stock_move_id.company_id.partner_id.id
             else:
                 _logger.info('Source location is external for partner ID %s', record.stock_move_id.picking_id.partner_id.id)
-                record.move_source_address = record.stock_move_id.picking_id.partner_id.id
+                #record.move_source_address = record.stock_move_id.picking_id.partner_id.id
             
             if record.move_location_dest_id.usage == 'internal':
-                _logger.info('Destination location is internal for partner ID %s', record.stock_move_id.company_id.partner_id.id)
+                #_logger.info('Destination location is internal for partner ID %s', record.stock_move_id.company_id.partner_id.id)
                 record.move_destination_address = record.stock_move_id.company_id.partner_id.id
             else:
-                _logger.info('Destination location is external for partner ID %s', record.stock_move_id.partner_id.id)
+                #_logger.info('Destination location is external for partner ID %s', record.stock_move_id.partner_id.id)
                 record.move_destination_address = record.stock_move_id.partner_id.id
 
 
 
     @api.model
     def unlink(self, values):
-        print("DELETE.................................") # consolra kinyomtatja
-        _logger.info('Attempt to delete excise.move record.') # logba beleírja
+        #print("DELETE.................................") # consolra kinyomtatja
+        #_logger.info('Attempt to delete excise.move record.') # logba beleírja
         raise UserError(_('You cannot delete an excise move record.')) # alsóvonás a fordíthatóság miatt van, hozzá kell adni az elesén: from odoo import _, api, fields, models
         #return super(excise_move, self).unlink()
