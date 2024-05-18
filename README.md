@@ -15,6 +15,7 @@
 - [ ] Fordítás
 - [ ] 2.14. Készletfelvétel során megállapított készlet többlet
 - [ ] 2.21. Szabadforgalomba bocsátott jövedéki termék kiszállítást követő 72 órán belül részben vagy teljes mennyiségben történő visszaszállítása*
+- [ ] 72 órán belüli visszaszállítás esetén: eredeti bizonylat száma, JOGCÍMKÓD csere, Vendor, Delivery address.
 - [ ] 3.7. A Jöt. 9. § (1) bekezdés c) pont cb) alpontja szerint megsemmisítés
 - [ ] 3.23. Szabadforgalomba bocsátott, az adóraktárban adófizetési kötelezettséget eredményező módon elfogyasztott, felhasznált jövedéki termék*
 - [ ] 3.27. Készletfelvétel során megállapított készlethiány
