@@ -41,8 +41,8 @@ class excise_move(models.Model):
                 related='stock_move_id.location_dest_id', readonly=True)
     move_partner_id = fields.Many2one('res.partner', 'Destination Address ',
                 related='stock_move_id.partner_id', readonly=True)
-    source_address = fields.Many2one('res.partner', string='Source Address', compute='_compute_addresses', store=True)
-    destination_address = fields.Many2one('res.partner', string='Destination Address', compute='_compute_addresses', store=True)
+    move_source_address = fields.Many2one('res.partner', string='Source Address', compute='_compute_addresses', store=True)
+    move_destination_address = fields.Many2one('res.partner', string='Destination Address', compute='_compute_addresses', store=True)
 
 
     excise_abv = fields.Float('ABV',help='Average By Volume (% Alcohol)',readonly=True)
