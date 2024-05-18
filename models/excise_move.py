@@ -63,7 +63,11 @@ class excise_move(models.Model):
     move_jogcimkod = fields.Char('Jogcímkód', readonly=True)
     move_adomennyisegkod = fields.Char('Adóm. kód', readonly=True)
     move_ahk = fields.Char('ARC', readonly=True)
-    move_excise_stock_type = fields.Char('Excise Stock Type', readonly=True)
+    move_excise_stock_type = fields.Selection([
+        ('0', 'Biztosítékmentes'), ('1', 'Biztosítékköteles'),
+        ('3', 'Adózott jöv. termék'),
+        ('4', 'Nem jöv. term.')], string='Excise Stock Type',
+        related='stock_move_id.move_excise_stock_type', index=True, readonly=True, store=True)
 
 
     @api.depends('move_location_id', 'move_location_dest_id', 'stock_move_id')
