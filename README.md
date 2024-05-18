@@ -6,11 +6,15 @@
 
 - [x] Excise Move törlés tiltása (reporting alatt)
 - [ ] Biztosítékköteles helyett készlettípus bevezetése (0 - biztosítékmentes, 1 - biztosítékköteles, 3 - adózott jöv. termék, 4 - nem jöv. term.)
+- [ ] Jogcímkód terméksoronként a fejlécből, de változtatható legyen (pl. értékesítés és promóciós termék ugyanazzal a szállítással)
+- [ ] Reportingban a visszaszállított tétel mínusz előjellel (?)
+- [ ] Reportingban a készletmozgás adott időszakra
 - [ ] Reporting alatt HLF megejelenítése
 - [ ] Reporting alatt "Source address" oszlop hozzáadása
 - [ ] ÁNYK export napi jelentés (J28)
 - [ ] ÁNYK havi jelentés (BEV J02)
 - [ ] ÁNYK I815M export
+- [ ] Ha az excise category-ban az additional category is beállításra kerül, akkor duplán kerül be az excis move-ba az adott move line
 - [ ] Excise Category alatt a kategóriában az "additional category " tiltása, mivel dupla move line jelenséghez vezet
 - [ ] Fordítás
 - [ ] 2.14. Készletfelvétel során megállapított készlet többlet
