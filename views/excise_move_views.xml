@@ -17,6 +17,7 @@
                 <field name="move_state"/>
                 <field name="move_qty"/>
                 <field name="move_location_id"/>
+                <field name="company_id"/>
                 <field name="move_location_dest_id"/>
                 <field name="move_partner_id"/>
                 <field name="excise_abv"/>
