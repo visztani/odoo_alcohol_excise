@@ -6,6 +6,7 @@
 
 - [x] Excise Move törlés tiltása (reporting alatt)
 - [ ] Reporting alatt HLF megejelenítése
+- [ ] Reporting alatt "Source address" oszlop hozzáadása
 - [ ] ÁNYK export napi jelentés (J28)
 - [ ] ÁNYK havi jelentés (BEV J02)
 - [ ] ÁNYK I815M export
