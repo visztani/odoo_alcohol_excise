@@ -5,6 +5,7 @@
 ### To-do tasks
 
 - [x] Excise Move törlés tiltása (reporting alatt)
+- [ ] Biztosítékköteles helyett készlettípus bevezetése (0 - biztosítékmentes, 1 - biztosítékköteles, 3 - adózott jöv. termék, 4 - nem jöv. term.)
 - [ ] Reporting alatt HLF megejelenítése
 - [ ] Reporting alatt "Source address" oszlop hozzáadása
 - [ ] ÁNYK export napi jelentés (J28)
