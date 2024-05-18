@@ -10,6 +10,11 @@ class StockPicking(models.Model):
     excise_car_no = fields.Char(string='Rendszám', compute='_compute_excise_car_no', store=True)
     excise_partner_whno = fields.Char('Partner Excise WH No.', compute='_compute_excise_partner_whno', store=True)
     excise_ahk = fields.Char('Admin. Ref. Code', compute='_compute_excise_ahk', store=True)
+    excise_stock_type = fields.Selection([
+        ('0', 'Biztosítékmentes'), ('1', 'Biztosítékköteles'),
+        ('3', 'Adózott jöv. termék'),
+        ('4', 'Nem jöv. term.')], string='Excise Stock Type',
+        related='product_id.excise_stock_type', index=True, readonly=True, store=True)
 
     @api.depends('move_ids_without_package', 'move_ids_without_package.total_hlf')
     def _compute_picking_line_hlf(self):
