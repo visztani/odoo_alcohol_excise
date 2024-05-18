@@ -21,6 +21,8 @@
 - [ ] Gyártás modul
 
 ### Követelmények
+
+[Szállítólevél adattartalma - Jöt. VH. rendelet 36. §](https://net.jogtar.hu/jogszabaly?docid=a1600045.ngm)
     
 [2016. évi LXViii. Törvény a jövedéki adóról](https://net.jogtar.hu/jogszabaly?docid=a1600068.tv)
 
