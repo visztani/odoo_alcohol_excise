@@ -10,7 +10,7 @@
 - [ ] Reportingban a visszaszállított tétel mínusz előjellel (?)
 - [ ] Reportingban a készletmozgás adott időszakra
 - [ ] Reporting alatt HLF megejelenítése
-- [ ] Reporting alatt "Source address" oszlop hozzáadása
+- [x] Reporting alatt "Source Partner" oszlop hozzáadása
 - [ ] ÁNYK export napi jelentés (J28)
 - [ ] ÁNYK havi jelentés (BEV J02)
 - [ ] ÁNYK I815M export
