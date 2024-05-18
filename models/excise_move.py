@@ -35,12 +35,12 @@ class excise_move(models.Model):
     move_reference = fields.Char(related='stock_move_id.reference', string="Reference", store=True)
     move_location_id = fields.Many2one('stock.location', 'Source Location',
                 related='stock_move_id.location_id', readonly=True)
-    move_source_id = fields.Many2one('res.company', 'Source Address ',
-                related='stock_move_id.company_id', readonly=True)
+    #move_source_id = fields.Many2one('res.company', 'Source Address ',
+    #            related='stock_move_id.company_id', readonly=True)
     move_location_dest_id = fields.Many2one('stock.location', 'Destination Location',
                 related='stock_move_id.location_dest_id', readonly=True)
-    move_partner_id = fields.Many2one('res.partner', 'Destination Address ',
-                related='stock_move_id.partner_id', readonly=True)
+    #move_partner_id = fields.Many2one('res.partner', 'Destination Address ',
+    #            related='stock_move_id.partner_id', readonly=True)
     move_source_address = fields.Many2one('res.partner', string='Source Address', compute='_compute_addresses', store=True)
     move_destination_address = fields.Many2one('res.partner', string='Destination Address', compute='_compute_addresses', store=True)
 
