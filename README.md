@@ -8,7 +8,7 @@
 - [ ] Biztosítékköteles helyett készlettípus bevezetése (0 - biztosítékmentes, 1 - biztosítékköteles, 3 - adózott jöv. termék, 4 - nem jöv. term.)
 - [ ] Jogcímkód terméksoronként a fejlécből, de változtatható legyen (pl. értékesítés és promóciós termék ugyanazzal a szállítással)
 - [ ] Reportingban a visszaszállított tétel mínusz előjellel (?)
-- [ ] Reportingban a készletmozgás adott időszakra
+- [x] Reportingban a készletmozgás adott időszakra
 - [ ] Reporting alatt HLF megejelenítése
 - [x] Reporting alatt "Sender" oszlop hozzáadása (feladó cég)
 - [ ] ÁNYK export napi jelentés (J28)

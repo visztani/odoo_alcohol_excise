@@ -63,6 +63,7 @@ class excise_move(models.Model):
     move_jogcimkod = fields.Char('Jogcímkód', readonly=True)
     move_adomennyisegkod = fields.Char('Adóm. kód', readonly=True)
     move_ahk = fields.Char('ARC', readonly=True)
+    move_excise_stock_type = fields.Char('Excise Stock Type', readonly=True)
 
     @api.depends('move_location_id', 'move_location_dest_id', 'stock_move_id')
     def _compute_addresses(self):
