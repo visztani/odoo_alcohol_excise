@@ -5,7 +5,7 @@
 ### To-do tasks
 
 - [x] Excise Move törlés tiltása (reporting alatt)
-- [ ] Biztosítékköteles helyett készlettípus bevezetése (0 - biztosítékmentes, 1 - biztosítékköteles, 3 - adózott jöv. termék, 4 - nem jöv. term.)
+- [x] Biztosítékköteles helyett készlettípus bevezetése (0 - biztosítékmentes, 1 - biztosítékköteles, 3 - adózott jöv. termék, 4 - nem jöv. term.)
 - [ ] Jogcímkód terméksoronként a fejlécből, de változtatható legyen (pl. értékesítés és promóciós termék ugyanazzal a szállítással)
 - [ ] Reportingban a visszaszállított tétel mínusz előjellel (?)
 - [x] Reportingban a készletmozgás adott időszakra
