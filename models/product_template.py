@@ -10,11 +10,11 @@ class ProductTemplate(models.Model):
     excise_volume = fields.Float('Excisable Volume (L)', help='Volume for the basis of the Excise calculation')
     excise_knkod = fields.Char('KN Code',help='Közös Nómenklatúra (Common Nomenclature) Code')
     excise_fajtakod = fields.Char('Fajtakód',help='Fajtakód')
-    #excise_guarantee_needed = fields.Boolean('Guarantee Needed',default=False,help='Excise Guarantee Needed')
-    excise_guarantee_needed = fields.Selection([
+    excise_guarantee_needed = fields.Boolean('Guarantee Needed',default=False,help='Excise Guarantee Needed')
+    excise_stock_type = fields.Selection([
         ('0', 'Biztosítékmentes'), ('1', 'Biztosítékköteles'),
         ('3', 'Adózott jöv. termék'),
-        ('4', 'Nem jöv. term.')], string='Stock Type',
+        ('4', 'Nem jöv. term.')], string='Excise Stock Type',
         index=True)
     
 class ProductProduct(models.Model):
