@@ -72,7 +72,7 @@ class excise_move(models.Model):
                 _logger.info('Source location is internal for partner ID %s', record.stock_move_id.company_id.partner_id.id)
                 record.move_source_address = record.stock_move_id.company_id.partner_id.id
             else:
-                _logger.info('Source location is external for partner ID %s', record.stock_move_id.picking_id.partnerid.id)
+                _logger.info('Source location is external for partner ID %s', record.stock_move_id.picking_id.partner_id.id)
                 record.move_source_address = record.stock_move_id.picking_id.partnerid.id
             
             if record.move_location_dest_id.usage == 'internal':
