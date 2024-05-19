@@ -9,6 +9,7 @@
                 <field name="product_id"/>
                 <field name="excise_knkod"/>
                 <field name="excise_fajtakod"/>
+                <field name="move_excise_stock_type"/>
                 <field name="move_jogcimkod"/>
                 <field name="move_adomennyisegkod"/>
                 <field name="move_ahk"/>
