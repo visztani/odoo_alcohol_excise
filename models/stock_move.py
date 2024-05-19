@@ -59,9 +59,9 @@ class StockMove(models.Model):
 
     
         excise_move_line_total_hlf = fields.Float(string='HLF Line', compute='_compute_total_hlf', store=True)
-        excise_move_line_fajtakod = fields.Char(string='Fajtakód', related='product_id.excise_fajtakod', readonly=True)
-        excise_move_line_knkod = fields.Char(string='KN kód', related='product_id.excise_knkod', readonly=True)
-        excise_move_line_guarantee = fields.Boolean(string='Biztosíték?', related='product_id.excise_guarantee_needed', readonly=True)
+        excise_move_line_fajtakod = fields.Char(string='Fajtakód', related='product_id.excise_fajtakod', readonly=True, store=True)
+        excise_move_line_knkod = fields.Char(string='KN kód', related='product_id.excise_knkod', readonly=True, store=True)
+        excise_move_line_guarantee = fields.Boolean(string='Biztosíték?', related='product_id.excise_guarantee_needed', readonly=True, store=True)
         excise_move_line_excise_stock_type = fields.Selection([
         ('0', 'Biztosítékmentes'), 
         ('1', 'Biztosítékköteles'),
