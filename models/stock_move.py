@@ -27,7 +27,7 @@ class StockMove(models.Model):
         for record in self:
             if record.product_id:
                 _logger.info('EM Computing excise stock type for product ID %s', record.product_id.excise_stock_type)
-                record.excise_move.excise_stock_type = record.product_id.excise_stock_type
+                record.excise_move_excise_stock_type = record.product_id.excise_stock_type
             else:
                 _logger.info('EM No product associated with this excise move record')
 
