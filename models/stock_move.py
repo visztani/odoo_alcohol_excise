@@ -20,7 +20,8 @@ class StockMove(models.Model):
         string='Excise Stock Type',
         compute='_compute_excise_stock_type', 
         store=True, 
-        index=True)
+        index=True,
+        readonly=True)
     
     @api.depends('product_id')
     def _compute_excise_stock_type(self):
