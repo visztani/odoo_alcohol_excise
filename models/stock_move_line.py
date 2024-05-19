@@ -79,7 +79,7 @@ class StockMoveLine(models.Model):
 
     @api.model
     def _create_excise_move(self, sml):
-        _logger.info('Creating excise move for Stock Move Line: %s', sml)
+        _logger.info('SML Creating excise move for Stock Move Line: %s', sml)
         emvalues = {
             'name': sml.move_id.name,
             'stock_move_line_id': sml.id,
