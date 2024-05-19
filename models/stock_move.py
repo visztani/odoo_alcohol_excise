@@ -12,26 +12,6 @@ class StockMove(models.Model):
     excise_move_fajtakod = fields.Char(string='Fajtakód', related='product_id.excise_fajtakod', readonly=True)
     excise_move_knkod = fields.Char(string='KN kód', related='product_id.excise_knkod', readonly=True)
     excise_move_guarantee = fields.Boolean(string='Biztosíték?', related='product_id.excise_guarantee_needed', readonly=True)
-    excise_move_excise_stock_type = fields.Selection([
-        ('0', 'Biztosítékmentes'), 
-        ('1', 'Biztosítékköteles'),
-        ('3', 'Adózott jöv. termék'),
-        ('4', 'Nem jöv. term.')], 
-        string='Excise Stock Type',
-        compute='_compute_excise_stock_type', 
-        store=True, 
-        index=True,
-        readonly=True)
-    
-    @api.depends('product_id')
-    def _compute_excise_stock_type(self):
-        for record in self:
-            if record.product_id:
-                _logger.info('EM Computing excise stock type for product ID %s', record.product_id.excise_stock_type)
-                record.excise_move_excise_stock_type = record.product_id.excise_stock_type
-            else:
-                _logger.info('EM No product associated with this excise move record')
-
 
     @api.depends('product_id', 'product_uom_qty', 'product_id.excise_hlf') # type: ignore
     def _compute_total_hlf(self):
@@ -82,6 +62,26 @@ class StockMove(models.Model):
         excise_move_line_fajtakod = fields.Char(string='Fajtakód', related='product_id.excise_fajtakod', readonly=True)
         excise_move_line_knkod = fields.Char(string='KN kód', related='product_id.excise_knkod', readonly=True)
         excise_move_line_guarantee = fields.Boolean(string='Biztosíték?', related='product_id.excise_guarantee_needed', readonly=True)
+        excise_move_line_excise_stock_type = fields.Selection([
+        ('0', 'Biztosítékmentes'), 
+        ('1', 'Biztosítékköteles'),
+        ('3', 'Adózott jöv. termék'),
+        ('4', 'Nem jöv. term.')], 
+        string='Excise Stock Type',
+        compute='_compute_excise_stock_type', 
+        store=True, 
+        index=True,
+        readonly=True)
+    
+    @api.depends('product_id')
+    def _compute_excise_stock_type(self):
+        for record in self:
+            if record.product_id:
+                _logger.info('EM Computing excise stock type for product ID %s', record.product_id.excise_stock_type)
+                record.excise_move_line_excise_stock_type = record.product_id.excise_stock_type
+            else:
+                _logger.info('EM No product associated with this excise move record')
+
 
         @api.depends('product_id', 'qty_done', 'product_id.excise_hlf') # type: ignore
         def _compute_total_hlf(self):
