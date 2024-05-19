@@ -12,6 +12,8 @@ class StockMove(models.Model):
     excise_move_fajtakod = fields.Char(string='Fajtakód', related='product_id.excise_fajtakod', readonly=True)
     excise_move_knkod = fields.Char(string='KN kód', related='product_id.excise_knkod', readonly=True)
     excise_move_guarantee = fields.Boolean(string='Biztosíték?', related='product_id.excise_guarantee_needed', readonly=True)
+    
+    # a receipt formon (stock picking) a termék sorok (move line - stock.move model) + mezője
     excise_move_excise_stock_type = fields.Selection([
         ('0', 'Biztosítékmentes'), 
         ('1', 'Biztosítékköteles'),
@@ -86,7 +88,7 @@ class StockMove(models.Model):
         ('1', 'Biztosítékköteles'),
         ('3', 'Adózott jöv. termék'),
         ('4', 'Nem jöv. term.')], 
-        string='Excise Stock Type',
+        string='Excise Stock Type Line',
         compute='_compute_excise_stock_type', 
         store=True, 
         index=True,
