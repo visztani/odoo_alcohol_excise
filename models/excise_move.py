@@ -67,7 +67,7 @@ class excise_move(models.Model):
         ('0', 'Biztosítékmentes'), ('1', 'Biztosítékköteles'),
         ('3', 'Adózott jöv. termék'),
         ('4', 'Nem jöv. term.')], string='Excise Stock Type',
-        related='stock_move_id.product_id.excise_stock_type', index=True, readonly=True, store=True)
+        related='stock_move_id.picking_id.excise_stock_type', index=True, readonly=True, store=True)
 
 
     @api.depends('move_location_id', 'move_location_dest_id', 'stock_move_id')
