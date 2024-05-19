@@ -27,6 +27,7 @@
                     <field name="excise_move_fajtakod"/>
                     <field name="excise_move_knkod"/>
                     <field name="excise_move_guarantee"/>
+                    <field name="excise_stock_type"/>
                 </xpath>
             </field>
         </record>
