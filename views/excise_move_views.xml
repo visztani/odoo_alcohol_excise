@@ -32,6 +32,19 @@
         </field>
     </record>
 
+    <!-- Add the daily report action -->
+    <record id="action_daily_report" model="ir.actions.act_window">
+        <field name="name">Daily Report</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">excise.move</field> <!-- Replace 'your.report.model' with your actual model -->
+        <field name="view_mode">tree,form</field> <!-- Specify the view modes you want to use -->
+        <!-- You can define more fields like 'context', 'domain', etc. based on your requirements -->
+    </record>
+
+    <!-- Create a menu item for the daily report under the 'Action' menu -->
+    <menuitem id="menu_daily_report" name="Daily Report" parent="stock.menu_warehouse_report" sequence="400"/>
+    <menuitem id="menu_daily_report_action" name="Daily Report" action="action_daily_report" parent="menu_daily_report" sequence="1"/>
+
     <record id="excise_move_search" model="ir.ui.view">
         <field name="name">excise.move.search</field>
         <field name="model">excise.move</field>
