@@ -95,17 +95,16 @@
         </field>
     </record>
 
-    <!-- Link the server action to the "Actions" menu in list view -->
-    <record id="action_daily_report_menu" model="ir.values">
+     <!-- Define a new action window for the Daily Report -->
+    <record id="action_daily_report_window" model="ir.actions.act_window">
         <field name="name">Daily Report</field>
-        <field name="model">excise.move</field> <!-- The model for which this action will be available -->
-        <field name="key2">client_action_multi</field> <!-- Specifies that this is a multi-record action -->
-        <field name="value" eval="[(6, 0, [ref('action_daily_report')])]"/>
+        <field name="res_model">excise.move</field>
+        <field name="view_mode">tree,pivot,form</field>
+        <field name="context">{}</field>
     </record>
 
     <!-- Create the "Daily Report" menu item -->
-    <menuitem id="menu_daily_report" name="Daily Report" parent="stock.menu_warehouse_report" sequence="400"/>
-    <menuitem id="menu_daily_report_action" name="Daily Report" action="action_daily_report" parent="menu_daily_report" sequence="1"/>
+    <menuitem id="menu_daily_report" name="Daily Report" parent="stock.menu_warehouse_report" action="action_daily_report_window" sequence="400"/>
 
 
 </odoo>
