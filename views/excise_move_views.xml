@@ -86,7 +86,7 @@
         <field name="context">{}</field>
     </record>
 -->
-    <!-- Create the "Daily Report" menu item -->
+    <!-- Create the "Daily Report" menu item 
     <menuitem id="menu_daily_report" name="Daily Report" parent="stock.menu_warehouse_report" action="action_daily_report_window" sequence="400"/>
-
+-->
 </odoo>
