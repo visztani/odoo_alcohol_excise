@@ -84,7 +84,7 @@
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">excise.move</field>
         <field name="view_mode">tree,pivot,form</field>
-        <field name="viwe_id" ref=odoo_alcohol_excise.excise_move_tree/>
+        <field name="view_id" ref=odoo_alcohol_excise.excise_move_tree/>
         <field name="context">{}</field>
     </record>
 
