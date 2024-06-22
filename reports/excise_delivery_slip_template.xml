@@ -225,7 +225,7 @@
                                     <strong>Fajtakód</strong>
                                 </th>
                                 <th name="th_sml_biztositek" class="text-center">
-                                    <strong>Biztosíték</strong>
+                                    <strong>Készlettípus</strong>
                                 </th>
                                 <th name="th_sml_qty_ordered" class="text-center" t-if="not has_serial_number">
                                     <strong>Ordered</strong>
