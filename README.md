@@ -4,7 +4,6 @@
 
 ### To-do tasks
 
-- [x] Fuvarokmányokon a "Biztosíték mezőben a TRUE/FALSE helyett (0 - biztosítékmentes, 1 - biztosítékköteles, 3 - adózott jöv. termék, 4 - nem jöv. term.)
 - [ ] Teljeskörű tesztelés
 - [ ] Nyitókészlet felvétele
 - [ ] Bejövő szállítmány
@@ -14,6 +13,7 @@
 - [ ] Készletjelentések
 - [x] Excise Move törlés tiltása (reporting alatt)
 - [x] Biztosítékköteles helyett készlettípus bevezetése (0 - biztosítékmentes, 1 - biztosítékköteles, 3 - adózott jöv. termék, 4 - nem jöv. term.)
+- [x] Fuvarokmányokon a "Biztosíték mezőben a TRUE/FALSE helyett (0 - biztosítékmentes, 1 - biztosítékköteles, 3 - adózott jöv. termék, 4 - nem jöv. term.)
 - [ ] Jogcímkód terméksoronként a fejlécből, de változtatható legyen (pl. értékesítés és promóciós termék ugyanazzal a szállítással)
 - [ ] Reportingban a visszaszállított tétel mínusz előjellel (?)
 - [x] Reportingban a készletmozgás adott időszakra
