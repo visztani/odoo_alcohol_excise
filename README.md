@@ -20,7 +20,7 @@
 - [ ] Reportingban a visszaszállított tétel mínusz előjellel (?)
 - [x] Reportingban a készletmozgás adott időszakra
 - [ ] Reporting alatt HLF megejelenítése
-- [x] Reporting alatt "Sender" oszlop hozzáadása (feladó cég)
+- [x] Reporting alatt "Sender" oszlop hozzáadása (feladó engedélyes)
 - [ ] ÁNYK export napi jelentés (J28)
 - [ ] ÁNYK havi jelentés (BEV J02)
 - [ ] ÁNYK I815M export
