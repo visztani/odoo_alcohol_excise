@@ -4,7 +4,9 @@
 
 ### To-do tasks
 
-- [ ] Rontott tételek kezelése a jelentésben (ha a tétel "visszavételezésre" kerül, hogy rontottnak lehessen jelölni (cancelled), a készletmozgás jelentébe ne kerüljön bele)
+- [ ] Rontott tételek kezelése a jelentésben (ha a tétel "visszavételezésre" kerül, hogy rontottnak lehessen jelölni (cancelled), a készletmozgás jelentésbe ne kerüljön bele)
+    (Feltehetőleg utólagosan kell majd módosítani az Excise Move rekordot)
+- [ ] Rontott tételnél a jogcímkód tölésre, módosításra kerüljön
 - [ ] Teljeskörű tesztelés
 - [ ] Nyitókészlet felvétele
 - [ ] Bejövő szállítmány
