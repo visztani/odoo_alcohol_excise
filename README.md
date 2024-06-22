@@ -4,12 +4,12 @@
 
 ### To-do tasks
 
+- [ ] Rontott tételek kezelése a jelentésben (ha a tétel "visszavételezésre" kerül, hogy rontottnak lehessen jelölni (cancelled), a készletmozgás jelentébe ne kerüljön bele)
 - [ ] Teljeskörű tesztelés
 - [ ] Nyitókészlet felvétele
 - [ ] Bejövő szállítmány
 - [ ] Kimenő termékek
 - [ ] Bizonylatok, szállítólevelek
-- [ ] Rontott tételek kezelése a jelentésben (ha a tétel "visszavételezésre" kerül, hogy rontottnak lehessen jelölni (cancelled), a készletmozgás jelentébe ne kerüljön bele)
 - [ ] Készletjelentések
 - [x] Excise Move törlés tiltása (reporting alatt)
 - [x] Biztosítékköteles helyett készlettípus bevezetése (0 - biztosítékmentes, 1 - biztosítékköteles, 3 - adózott jöv. termék, 4 - nem jöv. term.)
