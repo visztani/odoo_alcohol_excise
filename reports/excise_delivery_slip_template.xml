@@ -166,7 +166,7 @@
                                 <th name="th_sm_hlf"><strong>HLF Total</strong></th>
                                 <th name="th_sm_knkod"><strong>KN kód</strong></th>
                                 <th name="th_sm_fajtakod"><strong>Fajtakód</strong></th>
-                                <th name="th_sm_biztositek"><strong>Biztosíték</strong></th>
+                                <th name="th_sm_biztositek"><strong>Készlettípus</strong></th>
                                 <th name="th_sm_ordered"><strong>Ordered</strong></th>
                                 <th name="th_sm_quantity"><strong>Delivered</strong></th>
                             </tr>
