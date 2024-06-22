@@ -191,7 +191,7 @@
                                     <span t-field="move.excise_move_fajtakod"/>
                                 </td>
                                 <td>
-                                    <span t-field="move.excise_move_guarantee"/>
+                                    <span t-field="move.excise_move_excise_stock_type" />
                                 </td>
                                 <td>
                                     <span t-field="move.product_uom_qty"/>
