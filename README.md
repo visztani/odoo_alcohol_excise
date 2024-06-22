@@ -4,7 +4,7 @@
 
 ### To-do tasks
 
-- [ ] Fuvarokmányokon a "Biztosíték mezőben a TRUE/FALSE helyett (0 - biztosítékmentes, 1 - biztosítékköteles, 3 - adózott jöv. termék, 4 - nem jöv. term.)
+- [x] Fuvarokmányokon a "Biztosíték mezőben a TRUE/FALSE helyett (0 - biztosítékmentes, 1 - biztosítékköteles, 3 - adózott jöv. termék, 4 - nem jöv. term.)
 - [ ] Teljeskörű tesztelés
 - [ ] Nyitókészlet felvétele
 - [ ] Bejövő szállítmány
