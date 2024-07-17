@@ -35,7 +35,7 @@
 - [ ] 3.23. Szabadforgalomba bocsátott, az adóraktárban adófizetési kötelezettséget eredményező módon elfogyasztott, felhasznált jövedéki termék*
 - [ ] 3.27. Készletfelvétel során megállapított készlethiány
 - [ ] Gyártás modul
-- [ ] Biztosítékszàmítás
+- [ ] Biztosítékszámítás
 
 ### Követelmények
 
