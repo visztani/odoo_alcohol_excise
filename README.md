@@ -8,6 +8,7 @@
     (Feltehetőleg utólagosan kell majd módosítani az Excise Move rekordot)
 - [ ] Rontott tételnél a jogcímkód tölésre, módosításra kerüljön
 - [ ] Audit log (OCA modul)
+- [ ] Database restore események logolása
 - [ ] Teljeskörű tesztelés
 - [ ] Nyitókészlet felvétele
 - [ ] Bejövő szállítmány
