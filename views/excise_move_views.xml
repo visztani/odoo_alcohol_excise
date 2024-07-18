@@ -27,7 +27,7 @@
                 <field name="excise_category"/>
                 <field name="excise_rate"/>
                 <field name="excise_amount_tax"/>
-                <field name="excise_hlf"/>
+                <field name="move_hlf"/>
                 <field name="excise_payable"/>
             </tree>
         </field>

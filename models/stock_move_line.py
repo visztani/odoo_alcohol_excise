@@ -29,6 +29,7 @@ class StockMoveLine(models.Model):
             'move_adomennyisegkod': sml.picking_id.excise_adomennyiseg_kod,
             'move_ahk': sml.picking_id.excise_ahk,
             'move_excise_stock_type': sml.excise_move_line_excise_stock_type,
+            'move_hlf': sml.picking_id.excise_hlf,
         }
 
         if sml.qty_done == 0:
@@ -92,6 +93,7 @@ class StockMoveLine(models.Model):
             'move_adomennyisegkod': sml.picking_id.excise_adomennyiseg_kod,
             'move_ahk': sml.picking_id.excise_ahk,
             'move_excise_stock_type': sml.product_id.excise_stock_type,
+            'move_hlf': sml.picking_id.excise_hlf,
             
         }
 
