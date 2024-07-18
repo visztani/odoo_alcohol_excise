@@ -7,6 +7,7 @@
 - [ ] Rontott tételek kezelése a jelentésben (ha a tétel "visszavételezésre" kerül, hogy rontottnak lehessen jelölni (cancelled), a készletmozgás jelentésbe ne kerüljön bele)
     (Feltehetőleg utólagosan kell majd módosítani az Excise Move rekordot)
 - [ ] Rontott tételnél a jogcímkód tölésre, módosításra kerüljön
+- [ ] Reporting alatt HLF megejelenítése
 - [ ] Audit log (OCA modul)
 - [ ] Database restore események logolása
 - [ ] Teljeskörű tesztelés
@@ -21,7 +22,6 @@
 - [ ] Jogcímkód terméksoronként a fejlécből, de változtatható legyen (pl. értékesítés és promóciós termék ugyanazzal a szállítással)
 - [ ] Reportingban a visszaszállított tétel mínusz előjellel (?)
 - [x] Reportingban a készletmozgás adott időszakra
-- [ ] Reporting alatt HLF megejelenítése
 - [x] Reporting alatt "Sender" oszlop hozzáadása (feladó engedélyes)
 - [ ] ÁNYK export napi jelentés (J28)
 - [ ] ÁNYK havi jelentés (BEV J02)
