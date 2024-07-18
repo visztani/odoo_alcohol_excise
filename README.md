@@ -7,7 +7,7 @@
 - [ ] Rontott tételek kezelése a jelentésben (ha a tétel "visszavételezésre" kerül, hogy rontottnak lehessen jelölni (cancelled), a készletmozgás jelentésbe ne kerüljön bele)
     (Feltehetőleg utólagosan kell majd módosítani az Excise Move rekordot)
 - [ ] Rontott tételnél a jogcímkód tölésre, módosításra kerüljön
-- [ ] Reporting alatt HLF megejelenítése
+- [x] Reporting alatt HLF megejelenítése
 - [ ] Audit log (OCA modul)
 - [ ] Database restore események logolása
 - [ ] Teljeskörű tesztelés
