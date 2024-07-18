@@ -17,6 +17,9 @@ class StockMoveLine(models.Model):
             _logger.info('Excise move not required for Stock Move Line ID: %s', sml.id)
             return sml
 
+        if 'move_reference' in values and 'RET' in values['move_reference']:
+            values['qty_done'] = -abs(values.get('qty_done', 0.0))
+
         emvalues = {
             'name': sml.move_id.name,
             'stock_move_line_id': sml.id,
@@ -31,10 +34,15 @@ class StockMoveLine(models.Model):
             'move_excise_stock_type': sml.excise_move_line_excise_stock_type,
         }
 
-        if sml.qty_done == 0:
+        #if sml.qty_done == 0:
+        #    _qty = sml.reserved_qty
+        #else:
+        #    _qty = sml.qty_done
+
+        if values.get('qty_done', 0.0) == 0:
             _qty = sml.reserved_qty
         else:
-            _qty = sml.qty_done
+            _qty = values['qty_done']
 
         excise_result = self.env['excise.category']._calc_excise(sml.product_id, _qty)
         _logger.info('Excise result calculated: %s', excise_result)
@@ -56,6 +64,9 @@ class StockMoveLine(models.Model):
     def write(self, values):
         _logger.info('Entering write method with values: %s', values)
         for move_line in self:
+            if 'qty_done' in values and 'move_reference' in values and 'RET' in values['move_reference']:
+                values['qty_done'] = -abs(values['qty_done'])
+            
             if move_line.qty_done == 0:
                 _qty = move_line.reserved_qty
             else:
