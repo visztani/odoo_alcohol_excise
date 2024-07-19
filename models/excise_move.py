@@ -57,7 +57,9 @@ class excise_move(models.Model):
     # ennek a mezőnek kell értéket adni a stock_move_line.py-ban az emvaluesban: 'move_jogcimkod' : sml.picking_id.excise_jogcimkod,
     # 'move_jogcimkod' : sml.picking_id.excise_jogcimkod, sml -> az egész stock move line objektum, picking_id-> a példányosított stock.picking, amin az excise_jogcimkod szerepel.
 
-    #excise_move_hlf = fields.Float('HLF', compute='_compute_excise_move_hlf', store=True, readonly=True, help='HLF')
+    # 20240719001
+    excise_move_hlf = fields.Float('HLF', compute='_compute_excise_move_hlf', store=True, readonly=True, help='HLF')
+    # 20240719001
     excise_knkod = fields.Char('KN kód', help='KN', readonly=True)
     excise_fajtakod = fields.Char('Fajtakód', help='Fajtakod', readonly=True)
     move_jogcimkod = fields.Char('Jogcímkód', readonly=True)
@@ -91,14 +93,15 @@ class excise_move(models.Model):
                 _logger.info('Destination location is external for partner ID %s', record.stock_move_id.partner_id.id)
                 record.move_destination_address = record.stock_move_id.partner_id.id
 
-
-    #@api.depends('excise_abv', 'excise_move_volume')
-    #def _compute_excise_move_hlf(self):
-    #    for record in self:
-    #        if record.excise_abv and record.excise_move_volume:
-    #            record.excise_move_hlf = (record.excise_abv * record.excise_move_volume) / 100
-    #        else:
-    #            record.excise_move_hlf = 0.0
+    # 20240719001
+    @api.depends('excise_abv', 'excise_move_volume')
+    def _compute_excise_move_hlf(self):
+        for record in self:
+            if record.excise_abv and record.excise_move_volume:
+                record.excise_move_hlf = (record.excise_abv * record.excise_move_volume) / 100
+            else:
+                record.excise_move_hlf = 0.0
+    # 20240719001
 
     @api.model
     def unlink(self, values):
