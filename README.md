@@ -5,6 +5,8 @@
 ### To-do tasks
 
 - [ ] Rontott tételek kezelése a jelentésben (ha a tétel "visszavételezésre" kerül, hogy rontottnak lehessen jelölni (cancelled), a készletmozgás jelentésbe ne kerüljön bele) (Feltehetőleg utólagosan kell majd módosítani az Excise Move rekordot)
+Másik lehetőség: a HLF és a mennyiség oszlopk negtívak lesznek
+- [ ] Reportingban a visszaszállított tétel mínusz előjellel (?) (ha 72 órán belül visszaszállított, akkor más jogcímkód)
 - [ ] Rontott tételnél a jogcímkód tölésre, módosításra kerüljön
 - [x] Reporting alatt HLF megejelenítése (Volume of Alcohol (L) oszlop alatt látható)
 - [ ] Audit log (OCA modul)
@@ -19,7 +21,6 @@
 - [x] Biztosítékköteles helyett készlettípus bevezetése (0 - biztosítékmentes, 1 - biztosítékköteles, 3 - adózott jöv. termék, 4 - nem jöv. term.)
 - [x] Fuvarokmányokon a "Biztosíték mezőben a TRUE/FALSE helyett (0 - biztosítékmentes, 1 - biztosítékköteles, 3 - adózott jöv. termék, 4 - nem jöv. term.)
 - [ ] Jogcímkód terméksoronként a fejlécből, de változtatható legyen (pl. értékesítés és promóciós termék ugyanazzal a szállítással)
-- [ ] Reportingban a visszaszállított tétel mínusz előjellel (?)
 - [x] Reportingban a készletmozgás adott időszakra
 - [x] Reporting alatt "Sender" oszlop hozzáadása (feladó engedélyes)
 - [ ] ÁNYK export napi jelentés (J28)
