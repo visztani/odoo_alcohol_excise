@@ -20,7 +20,7 @@ Másik lehetőség: a HLF és a mennyiség oszlopk negtívak lesznek
 - [x] Excise Move törlés tiltása (reporting alatt)
 - [x] Biztosítékköteles helyett készlettípus bevezetése (0 - biztosítékmentes, 1 - biztosítékköteles, 3 - adózott jöv. termék, 4 - nem jöv. term.)
 - [x] Fuvarokmányokon a "Biztosíték mezőben a TRUE/FALSE helyett (0 - biztosítékmentes, 1 - biztosítékköteles, 3 - adózott jöv. termék, 4 - nem jöv. term.)
-- [ ] Jogcímkód terméksoronként a fejlécből, de változtatható legyen (pl. értékesítés és promóciós termék ugyanazzal a szállítással)
+- [x] Jogcímkód terméksoronként a fejlécből, de változtatható legyen (pl. értékesítés és promóciós termék ugyanazzal a szállítással). Ha Done, locked, canceled a státusz, az érték nem változtatható.
 - [x] Reportingban a készletmozgás adott időszakra
 - [x] Reporting alatt "Sender" oszlop hozzáadása (feladó engedélyes)
 - [ ] ÁNYK export napi jelentés (J28)
