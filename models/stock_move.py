@@ -31,7 +31,7 @@ class StockMove(models.Model):
     @api.depends('excise_move_jogcimkod')
     def _compute_excise_move_jogcimkod(self):
         for line in self:
-            line.excise_move_jogcimkod = line.move_line_id.excise_line_jogcimkod
+            line.excise_move_jogcimkod = line.move_id.excise_line_jogcimkod
     
     @api.depends('product_id')
     def _compute_excise_stock_type(self):
