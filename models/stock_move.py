@@ -28,10 +28,10 @@ class StockMove(models.Model):
     JOGCIMKODOK = [('32203','KI Jöv. kisker - 32203'),('20503','BE tagállamból adófelfügesztéssel - 32203'),('32201','KI Magánszemély - 32201'),('32202','KI Jöv. eng. nagyker - 32202'),('0','Nem jövedéki')]
     excise_move_jogcimkod = fields.Selection(string='Jojgcímkód', selection=JOGCIMKODOK, compute='_compute_excise_move_jogcimkod', store=True, readonly=False)
 
-    @api.depends('excise_move_jogcimkod')
+    @api.depends('excise_move_jogcimkod', 'move_line_id')
     def _compute_excise_move_jogcimkod(self):
         for line in self:
-            line.excise_move_jogcimkod = line.excise_line_jogcimkod
+            line.excise_move_jogcimkod = line.move_line_id.excise_line_jogcimkod
     
     @api.depends('product_id')
     def _compute_excise_stock_type(self):
