@@ -103,6 +103,61 @@ class excise_move(models.Model):
                 record.excise_move_hlf = 0.0
     # 20240719001
 
+    # 20241023002
+    @api.model
+    def create(self, vals):
+        # Check if the move_reference contains '/RET/'
+        if vals.get('move_reference') and '/RET/' in vals['move_reference']:
+            # Make the relevant fields negative
+            if vals.get('excise_move_volume') is not None:
+                vals['excise_move_volume'] = abs(vals['excise_move_volume']) * -1
+            if vals.get('excise_alcohol') is not None:
+                vals['excise_alcohol'] = abs(vals['excise_alcohol']) * -1
+            if vals.get('excise_move_hlf') is not None:
+                vals['excise_move_hlf'] = abs(vals['excise_move_hlf']) * -1
+            if vals.get('move_qty') is not None:
+                vals['move_qty'] = abs(vals['move_qty']) * -1
+            
+            # Set cancelled to True if it's a return
+            vals['cancelled'] = True
+
+            # Check and set cancelled on the original move referenced by move_ahk
+            if vals.get('move_ahk') and vals['move_ahk'].startswith("Return of "):
+                original_reference = vals['move_ahk'].replace("Return of ", "")
+                original_move = self.search([('move_reference', '=', original_reference)], limit=1)
+                if original_move:
+                    original_move.cancelled = True
+
+        return super(ExciseMove, self).create(vals)
+
+    def write(self, vals):
+        # Check if the move_reference contains '/RET/'
+        if 'move_reference' in vals and '/RET/' in vals['move_reference']:
+            # Make the relevant fields negative
+            if vals.get('excise_move_volume') is not None:
+                vals['excise_move_volume'] = abs(vals['excise_move_volume']) * -1
+            if vals.get('excise_alcohol') is not None:
+                vals['excise_alcohol'] = abs(vals['excise_alcohol']) * -1
+            if vals.get('excise_move_hlf') is not None:
+                vals['excise_move_hlf'] = abs(vals['excise_move_hlf']) * -1
+            if vals.get('move_qty') is not None:
+                vals['move_qty'] = abs(vals['move_qty']) * -1
+
+            # Set cancelled to True if it's a return
+            vals['cancelled'] = True
+
+            # Check and set cancelled on the original move referenced by move_ahk
+            if 'move_ahk' in vals and vals['move_ahk'].startswith("Return of "):
+                original_reference = vals['move_ahk'].replace("Return of ", "")
+                original_move = self.search([('move_reference', '=', original_reference)], limit=1)
+                if original_move:
+                    original_move.cancelled = True
+
+        return super(ExciseMove, self).write(vals)
+    
+    #20241023002
+
+    
     @api.model
     def unlink(self, values):
         #print("DELETE.................................") # consolra kinyomtatja
