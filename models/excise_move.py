@@ -65,7 +65,7 @@ class excise_move(models.Model):
     move_jogcimkod = fields.Char('Jogcímkód', readonly=True)
     move_adomennyisegkod = fields.Char('Adóm. kód', readonly=True)
     move_ahk = fields.Char('ARC', readonly=True)
-    move_cancelled = fields.Boolean(string="Cancelled", default=False)
+    cancelled = fields.Boolean(string="Cancelled", default=False)
     move_excise_stock_type = fields.Selection([
         ('0', 'Biztosítékmentes'), ('1', 'Biztosítékköteles'),
         ('3', 'Adózott jöv. termék'),
@@ -129,7 +129,7 @@ class excise_move(models.Model):
                 if original_move:
                     original_move.cancelled = True
 
-        return super(ExciseMove, self).create(vals)
+        return super(excise_move, self).create(vals)
 
     def write(self, vals):
         # Check if the move_reference contains '/RET/'
@@ -154,7 +154,7 @@ class excise_move(models.Model):
                 if original_move:
                     original_move.cancelled = True
 
-        return super(ExciseMove, self).write(vals)
+        return super().write(vals)
     
     #20241023002
 
