@@ -5,9 +5,9 @@
         <field name="name">Excise Lines</field>
         <field name="model">excise.move</field>
         <field name="arch" type="xml">
-            <tree editable="bottom">
+            <tree editable="bottom" delete="false" create="false">
                 <!-- Kézzel módosítható cancelled mező -->
-                <field name="cancelled" readonly="alse"/>
+                <field name="cancelled" readonly="false"/>
                 <field name="product_id"/>
                 <field name="excise_knkod"/>
                 <field name="excise_fajtakod"/>
