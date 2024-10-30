@@ -31,7 +31,7 @@
                 <field name="excise_move_hlf"/>
                 <!-- 20240719 -->
                 <!-- Kézzel módosítható cancelled mező -->
-                <field name="cancelled" modifiers="{}"/>
+                <field name="move_cancelled" modifiers="{}"/>
             </tree>
         </field>
     </record>

@@ -65,6 +65,7 @@ class excise_move(models.Model):
     move_jogcimkod = fields.Char('Jogcímkód', readonly=True)
     move_adomennyisegkod = fields.Char('Adóm. kód', readonly=True)
     move_ahk = fields.Char('ARC', readonly=True)
+    move_cancelled = fields.Boolean(string="Cancelled", default=False)
     move_excise_stock_type = fields.Selection([
         ('0', 'Biztosítékmentes'), ('1', 'Biztosítékköteles'),
         ('3', 'Adózott jöv. termék'),
