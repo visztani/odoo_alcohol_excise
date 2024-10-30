@@ -6,6 +6,8 @@
         <field name="model">excise.move</field>
         <field name="arch" type="xml">
             <tree>
+                <!-- Kézzel módosítható cancelled mező -->
+                <field name="cancelled" modifiers="{}" readonly="False"/>
                 <field name="product_id"/>
                 <field name="excise_knkod"/>
                 <field name="excise_fajtakod"/>
@@ -30,8 +32,6 @@
                 <!-- 20240719 -->
                 <field name="excise_move_hlf"/>
                 <!-- 20240719 -->
-                <!-- Kézzel módosítható cancelled mező -->
-                <field name="cancelled" modifiers="{}" readonly="False"/>
             </tree>
         </field>
     </record>
