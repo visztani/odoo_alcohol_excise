@@ -9,29 +9,29 @@
                 <field name="company_id" invisible="1"/>  <!-- Hozzáadjuk, hogy megfeleljen a domain feltételnek -->
                 <!-- Kézzel módosítható cancelled mező -->
                 <field name="cancelled"/>
-                <field name="product_id"/>
-                <field name="excise_knkod"/>
-                <field name="excise_fajtakod"/>
-                <field name="move_excise_stock_type"/>
-                <field name="move_jogcimkod"/>
-                <field name="move_adomennyisegkod"/>
-                <field name="move_ahk"/>
-                <field name="date"/>
-                <field name="move_reference"/>
-                <field name="move_state"/>
-                <field name="move_qty"/>
-                <field name="move_location_id"/>
-                <field name="move_source_address"/>
-                <field name="move_location_dest_id"/>
-                <field name="move_destination_address"/>
-                <field name="excise_abv"/>
-                <field name="excise_move_volume"/>
-                <field name="excise_alcohol"/>
-                <field name="excise_category"/>
-                <field name="excise_rate"/>
-                <field name="excise_amount_tax"/>
+                <field name="product_id" readonly="true"/>
+                <field name="excise_knkod" readonly="true"/>
+                <field name="excise_fajtakod" readonly="true"/>
+                <field name="move_excise_stock_type" readonly="true"/>
+                <field name="move_jogcimkod" readonly="true"/>
+                <field name="move_adomennyisegkod" readonly="true"/>
+                <field name="move_ahk" readonly="true"/>
+                <field name="date" readonly="true"/>
+                <field name="move_reference" readonly="true"/>
+                <field name="move_state" readonly="true"/>
+                <field name="move_qty" readonly="true"/>
+                <field name="move_location_id" readonly="true"/>
+                <field name="move_source_address" readonly="true"/>
+                <field name="move_location_dest_id" readonly="true"/>
+                <field name="move_destination_address" readonly="true"/>
+                <field name="excise_abv" readonly="true"/>
+                <field name="excise_move_volume" readonly="true"/>
+                <field name="excise_alcohol" readonly="true"/>
+                <field name="excise_category" readonly="true"/>
+                <field name="excise_rate" readonly="true"/>
+                <field name="excise_amount_tax" readonly="true"/>
                 <!-- 20240719 -->
-                <field name="excise_move_hlf"/>
+                <field name="excise_move_hlf" readonly="true"/>
                 <!-- 20240719 -->
             </tree>
         </field>
