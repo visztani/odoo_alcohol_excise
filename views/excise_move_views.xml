@@ -47,6 +47,7 @@
                 <separator/>
                 <filter string="To Do" name="todo" domain="[('move_state', 'not in', ['done', 'draft'])]"/>
                 <filter string="Done" name="done" domain="[('move_state', '=', 'done')]"/>
+                <separator/>
                 <!-- Alapértelmezett szűrő a nem törölt rekordokhoz -->
                 <filter string="Active" name="not_cancelled" domain="[('cancelled', '=', False)]"/>
                 <separator/>
@@ -68,7 +69,7 @@
         <field name="type">ir.actions.act_window</field>
         <field name="view_mode">tree,pivot,form</field>
         <field name="view_id" ref="excise_move_tree"/>
-        <field name="context">{'search_default_done': 1, 'search_default_groupby_excise_category': 1}</field>
+        <field name="context">{'search_default_done': 1, 'search_default_not_cancelled': 1, 'search_default_groupby_excise_category': 1}</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_empty_folder">
                 There are no excise move lines yet
