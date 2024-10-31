@@ -48,7 +48,7 @@
                 <filter string="To Do" name="todo" domain="[('move_state', 'not in', ['done', 'draft'])]"/>
                 <filter string="Done" name="done" domain="[('move_state', '=', 'done')]"/>
                 <!-- Alapértelmezett szűrő a nem törölt rekordokhoz -->
-                <filter string="Active" name="not_cancelled" domain="[('cancelled', '=', False)]" auto="true"/>
+                <filter string="Active" name="not_cancelled" domain="[('cancelled', '=', False)]"/>
                 <separator/>
                 <filter string="Date" name="today" date="date"/>
                 <separator/>
