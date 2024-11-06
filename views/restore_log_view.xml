@@ -5,7 +5,7 @@
         <field name="res_model">excise.log.restore</field>
         <field name="type">ir.actions.act_window</field>
         <field name="view_mode">tree,form</field>
-        <field name="view_id" ref="restore_log_tree"/>
+        <field name="view_id" ref="view_log_restore_tree"/>
         <field name="help" type="html">
             <p class="o_view_nocontent_empty_folder">
                 There are no log records yet.
@@ -47,10 +47,5 @@
             </form>
         </field>
     </record>
-
-        <menuitem id="visztani" 
-        name="Restore Logs"
-        action="excise_move_action" 
-        parent="stock.menu_warehouse_report" sequence="450"/>
 
 </odoo>
