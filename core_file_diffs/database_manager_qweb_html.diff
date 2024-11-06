@@ -1,0 +1,22 @@
+--- database_manager.qweb.html	2024-11-06 16:55:36.807963803 +0000
++++ database_manager.qweb.html.origi	2024-11-06 18:47:19.404187561 +0000
+@@ -133,19 +133,6 @@
+                                 <div class="col-md-8">
+                                     <input id="dbname_restore" type="text" name="name" class="form-control" required="required" t-att-pattern="pattern" title="Only alphanumerical characters, underscore, hyphen and dot are allowed"/>
+                                 </div>
+-				<!-- 20241106 -->
+-				<div class="row mb-3">
+-				    <label for="restore_purpose" class="col-md-4 col-form-label">Restore Purpose</label>
+-				    <div class="col-md-8">
+-				        <input id="restore_purpose" type="text" name="restore_purpose" class="form-control" required="required" />
+-				    </div>
+-				</div>
+-				<div class="row mb-3">
+-				    <label for="restorer_name" class="col-md-4 col-form-label">Restorer's Name</label>
+-				    <div class="col-md-8">
+-				        <input id="restorer_name" type="text" name="restorer_name" class="form-control" required="required" />
+-				    </div>
+-				</div>
+                             </div>
+                               <div class="row mb-3">
+                                   <label for="neutralize_database_restore" class="col-md-4 col-form-label" >Neutralize</label>
