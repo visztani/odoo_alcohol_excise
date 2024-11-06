@@ -18,6 +18,7 @@
         'views/sale_order_view_excise.xml',
         'views/purchase_order_view_excise.xml',
         'views/partner_excise.xml',
+        'views/restore_log_view.xml',
         'reports/excise_delivery_slip.xml',
         'reports/excise_delivery_slip_template.xml',
         'security/ir.model.access.csv',
