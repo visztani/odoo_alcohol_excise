@@ -7,7 +7,10 @@
     </record>
 
     <!-- Define the menu item to access the logs -->
-    <menuitem id="excise_log_restore_menu" name="Restore Logs" parent="base.menu_administration" action="action_restore_logs"/>
+    <menuitem id="excise_log_restore_menu" 
+        name="Restore Logs" 
+        parent="base.menu_administration" 
+        action="stock.menu_warehouse_report" sequence="349"/>
 
     <!-- Tree view to list logs -->
     <record id="view_log_restore_tree" model="ir.ui.view">
