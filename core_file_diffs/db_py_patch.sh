@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define file paths
-ORIGINAL_FILE="/usr/lib/python3/dist-packages/odoo/service/db.py.origi"
+ORIGINAL_FILE="/usr/lib/python3/dist-packages/odoo/addons/odoo_alcohol_excise/core_file_diffs/db.py.origi"
 UPDATED_FILE="/usr/lib/python3/dist-packages/odoo/service/db.py"
 PATCH_FILE="/usr/lib/python3/dist-packages/odoo/addons/odoo_alcohol_excise/core_file_diffs/db_py_patch.diff"
 
