@@ -4,13 +4,12 @@
 
 ### To-do tasks
 
-- [ ] Rontott tételek kezelése a jelentésben (ha a tétel "visszavételezésre" kerül, hogy rontottnak lehessen jelölni (cancelled), a készletmozgás jelentésbe ne kerüljön bele) (Feltehetőleg utólagosan kell majd módosítani az Excise Move rekordot)
-Másik lehetőség: a HLF és a mennyiség oszlopk negtívak lesznek
+- [x] Rontott tételek kezelése a jelentésben (ha a tétel "visszavételezésre" kerül, hogy rontottnak lehessen jelölni (cancelled), a készletmozgás jelentésbe ne kerüljön bele) (Feltehetőleg utólagosan kell majd módosítani az Excise Move rekordot). Másik lehetőség: a HLF és a mennyiség oszlopk negtívak lesznek. ||| Úgy került megoldásra, hogy a lista nézetből azok az árumozgások a "Reference" (move_reference) tartalmazza a "/RET/" sztringet (Return), kiszűri (excise_move_views.xml)
 - [ ] Reportingban a visszaszállított tétel mínusz előjellel (?) (ha 72 órán belül visszaszállított, akkor más jogcímkód)
 - [ ] Rontott tételnél a jogcímkód tölésre, módosításra kerüljön
 - [x] Reporting alatt HLF megejelenítése (Volume of Alcohol (L) oszlop alatt látható)
-- [ ] Audit log (OCA modul)
-- [ ] Database restore események logolása
+- [ ] Audit log (OCA modul) ||| https://odoo-community.org/shop/audit-log-533#attr=22890
+- [x] Database restore események logolása ||| kiratás a docker szerveren: docker logs odoo16 | grep -ia restor - ahol az odoo16 a docker env.
 - [ ] Teljeskörű tesztelés
 - [ ] Nyitókészlet felvétele
 - [ ] Bejövő szállítmány
