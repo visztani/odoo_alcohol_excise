@@ -3,7 +3,14 @@
     <record id="action_restore_logs" model="ir.actions.act_window">
         <field name="name">Restore Logs</field>
         <field name="res_model">excise.log.restore</field>
+        <field name="type">ir.actions.act_window</field>
         <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="restore_log_tree"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_empty_folder">
+                There are no log records yet.
+            </p>
+        </field>
     </record>
 
     <!-- Define the menu item to access the logs -->
