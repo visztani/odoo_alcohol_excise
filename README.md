@@ -9,7 +9,7 @@
 - [ ] Rontott tételnél a jogcímkód tölésre, módosításra kerüljön
 - [x] Reporting alatt HLF megejelenítése (Volume of Alcohol (L) oszlop alatt látható)
 - [ ] Audit log (OCA modul) ||| https://odoo-community.org/shop/audit-log-533#attr=22890
-- [x] Database restore események logolása ||| kiratás a docker szerveren: docker logs odoo16 | grep -ia restor - ahol az odoo16 a docker env.
+- [x] Database restore események logolása ||| kiíratás a docker szerveren: docker logs odoo16 | grep -ia restor - ahol az odoo16 a docker env.
 - [ ] Teljeskörű tesztelés
 - [ ] Nyitókészlet felvétele
 - [ ] Bejövő szállítmány
