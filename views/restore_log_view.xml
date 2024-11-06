@@ -43,7 +43,7 @@
 
         <menuitem id="visztani" 
         name="Restore Logs"
-        action="action_restore_logs" 
+        action="excise_move_action" 
         parent="stock.menu_warehouse_report" sequence="450"/>
 
 </odoo>
