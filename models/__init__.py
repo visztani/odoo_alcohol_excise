@@ -10,6 +10,7 @@ from . import excisesetup
 from . import stock_move
 from . import excise_move
 from . import stock_move_line
+from . import restore_log
 
 #_logger.info('excise_move model loaded.')
 
