@@ -277,3 +277,43 @@ Under the reporting menu look at the Excise moves.
 An Excise move is created per movement per excise category. If the category has an additional category (High-streingth beer) then two excise move records will be created.
 
 You can view these Excise moves either grouped or in a pivot. Use standard Odoo filtering to assist the completion of returns.
+
+
+------------------------------------------------------
+
+
+ha a docker szerveren ezt írom be: docker logs odoo16 , akkor kiadja az INFO sorokat a logban, ha viszont a docker envben a /var/log/odoo/odoo-server.log ot nézem, akkor abban nincsenek INFO rekordok
+A ChatGPT ezt mondta:
+ChatGPT
+In Docker environments, the behavior you're describing is likely due to how logging is configured within Odoo and Docker.
+
+Docker Logs (docker logs odoo16): By default, Docker collects logs from the standard output (stdout) and standard error (stderr) of the container. Odoo might be configured to log INFO-level messages to stdout or stderr, which is why they appear when you run docker logs.
+
+Odoo Log File (/var/log/odoo/odoo-server.log): The log file might have a different logging level configuration or be set to only capture higher-level logs (like WARNING or ERROR), which is why you don't see INFO logs there. You can modify Odoo's logging configuration to ensure all log levels are captured in both locations.
+
+Solution:
+Check your Odoo logging configuration in the odoo.conf file. You might need to adjust the log_level parameter to include INFO logs.
+
+Example:
+
+ini
+
+[options]
+log_level = info
+logfile = /var/log/odoo/odoo-server.log
+This will ensure that INFO logs are written to the log file as well as stdout.
+
+-------------
+
+To give excise.log.restore the proper access permissions, you need to add entries to your ir.model.access.csv file. Here’s how to add them:
+
+csv
+
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_excise_log_restore_user,Excise Log Restore User,model_excise_log_restore,stock.group_stock_user,1,0,0,0
+access_excise_log_restore_manager,Excise Log Restore Manager,model_excise_log_restore,stock.group_stock_manager,1,1,1,1
+In this setup:
+
+The stock.group_stock_user group will only have read access.
+The stock.group_stock_manager group will have full access.
+After updating ir.model.access.csv, restart Odoo and upgrade the module for the changes to take effect. This should make your model accessible and allow it to be viewed through the menu.
