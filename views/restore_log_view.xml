@@ -40,4 +40,10 @@
             </form>
         </field>
     </record>
+
+        <menuitem id="visztani" 
+        name="Visztani"
+        action="excise_move_action" 
+        parent="stock.menu_warehouse_report" sequence="450"/>
+
 </odoo>
