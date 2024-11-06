@@ -1,13 +1,13 @@
 <odoo>
-    <!-- Menu item for the new log form -->
-    <menuitem id="excise_log_restore_menu" name="Restore Logs" parent="base.menu_administration" action="action_restore_logs"/>
-
-    <!-- Action to call the form view -->
+    <!-- Define the action for viewing the logs -->
     <record id="action_restore_logs" model="ir.actions.act_window">
         <field name="name">Restore Logs</field>
         <field name="res_model">excise.log.restore</field>
         <field name="view_mode">tree,form</field>
     </record>
+
+    <!-- Define the menu item to access the logs -->
+    <menuitem id="excise_log_restore_menu" name="Restore Logs" parent="base.menu_administration" action="action_restore_logs"/>
 
     <!-- Tree view to list logs -->
     <record id="view_log_restore_tree" model="ir.ui.view">
@@ -20,7 +20,7 @@
         </field>
     </record>
 
-    <!-- Form view to display logs in detail -->
+    <!-- Form view to display logs in detail with a button to fetch logs -->
     <record id="view_log_restore_form" model="ir.ui.view">
         <field name="name">log.restore.form</field>
         <field name="model">excise.log.restore</field>
