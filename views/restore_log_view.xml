@@ -1,0 +1,40 @@
+<odoo>
+    <!-- Menu item for the new log form -->
+    <menuitem id="excise_log_restore_menu" name="Restore Logs" parent="base.menu_administration" action="action_restore_logs"/>
+
+    <!-- Action to call the form view -->
+    <record id="action_restore_logs" model="ir.actions.act_window">
+        <field name="name">Restore Logs</field>
+        <field name="res_model">excise.log.restore</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Tree view to list logs -->
+    <record id="view_log_restore_tree" model="ir.ui.view">
+        <field name="name">log.restore.tree</field>
+        <field name="model">excise.log.restore</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="log_line"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form view to display logs in detail -->
+    <record id="view_log_restore_form" model="ir.ui.view">
+        <field name="name">log.restore.form</field>
+        <field name="model">excise.log.restore</field>
+        <field name="arch" type="xml">
+            <form string="Restore Log">
+                <header>
+                    <button name="action_fetch_logs" type="object" string="Fetch Logs" class="btn-primary"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="log_line"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
