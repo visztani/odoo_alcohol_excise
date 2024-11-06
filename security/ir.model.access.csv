@@ -5,3 +5,5 @@ access_excise_category_rate_user,Excise Category User,model_excise_category_rate
 access_excise_category_rate_manager,Excise Category Manager,model_excise_category_rate,stock.group_stock_manager,1,1,1,1
 access_excise_move_user,Excise Category User,model_excise_move,stock.group_stock_user,1,1,1,1
 access_excise_move_manager,Excise Category Manager,model_excise_move,stock.group_stock_manager,1,1,1,1
+access_excise_log_restore_user,Excise Log Restore User,model_excise_log_restore,stock.group_stock_user,1,0,0,0
+access_excise_log_restore_manager,Excise Log Restore Manager,model_excise_log_restore,stock.group_stock_manager,1,1,1,1
