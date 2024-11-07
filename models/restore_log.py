@@ -15,7 +15,7 @@ class LogRestore(models.Model):
         if os.path.exists(log_file_path):
             with open(log_file_path, 'r') as f:
                 for line in f:
-                    if 'restore' in line.lower():
+                    if 'odoo.addons.web.controllers.database' in line.lower():
                         restore_logs.append({'log_line': line.strip()})
         
         # Create log entries

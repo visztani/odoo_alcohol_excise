@@ -229,6 +229,22 @@ This software is Free and Open source.
 
 You must have the Inventory (stock) module installed before you install the Excise module. Clone the repository into the custom add-ons folder defined in your Odoo configuration file. After updating your Apps list the Excise-Alcohol app will become available for installation.
 
+A DB restore naplóhoz a core fájlokat is módosítani kell, mivel amikor a db restore történik, akkor még nincsenek modulok betöltve. A restore formon megjelenik kettő plusz mező: ki és milyen célból restoreolja az adatbázist. Ez belekerül az odoo logba. A restore_log.py kiolvassa a logból és kilistázza.
+
+odoo.conf-ba be kell írni:
+
+[options]
+log_level = info
+logfile = /var/log/odoo/odoo-server.log
+This will ensure that INFO logs are written to the log file as well as stdout.
+
+Mivel a core fájlok is módosulnak, update után felülíródnak. Ilyenkor a core_file_diffs mappában lévő patch szkripteket kell lefuttatni, ami visszaírja a különbségeket. Ha a core fileokban is történt változás, manuálisan kell beletenni a változtatásokat.
+
+MEGFONTOLANDÓ
+
+https://apps.odoo.com/apps/modules/16.0/odoo_database_restore_manager
+
+Ez a modul modulként működik, nem kell a core fileokat módosítani hozzá.
   
 
 ### Setup
