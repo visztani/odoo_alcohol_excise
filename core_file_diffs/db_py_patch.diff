@@ -1,12 +1,12 @@
---- db.py	2024-11-06 17:12:54.019235282 +0000
-+++ db.py.origi	2024-11-06 17:08:55.175135508 +0000
-@@ -286,8 +286,7 @@
+--- db.py.origi 2024-11-06 19:05:08.762161033 +0000
++++ /usr/lib/python3/dist-packages/odoo/service/db.py   2024-11-06 17:12:54.019235282 +0000
+@@ -286,7 +286,8 @@
      return True
- 
+
  @check_db_management_enabled
--def restore_db(db, dump_file, copy=False, neutralize_database=False, restore_purpose=None, restorer_name=None):
--    _logger.info(f"Database restored by {restorer_name} for purpose: {restore_purpose}") # 202411061812
-+def restore_db(db, dump_file, copy=False, neutralize_database=False):
+-def restore_db(db, dump_file, copy=False, neutralize_database=False):
++def restore_db(db, dump_file, copy=False, neutralize_database=False, restore_purpose=None, restorer_name=None):
++    _logger.info(f"Database restored by {restorer_name} for purpose: {restore_purpose}") # 202411061812
      assert isinstance(db, str)
      if exp_db_exist(db):
          _logger.warning('RESTORE DB: %s already exists', db)

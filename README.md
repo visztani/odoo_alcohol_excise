@@ -283,8 +283,7 @@ You can view these Excise moves either grouped or in a pivot. Use standard Odoo 
 
 
 ha a docker szerveren ezt írom be: docker logs odoo16 , akkor kiadja az INFO sorokat a logban, ha viszont a docker envben a /var/log/odoo/odoo-server.log ot nézem, akkor abban nincsenek INFO rekordok
-A ChatGPT ezt mondta:
-ChatGPT
+
 In Docker environments, the behavior you're describing is likely due to how logging is configured within Odoo and Docker.
 
 Docker Logs (docker logs odoo16): By default, Docker collects logs from the standard output (stdout) and standard error (stderr) of the container. Odoo might be configured to log INFO-level messages to stdout or stderr, which is why they appear when you run docker logs.
