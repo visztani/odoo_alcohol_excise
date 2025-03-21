@@ -1,4 +1,16 @@
 <odoo>
+    
+    <!-- Tree view to list logs -->
+    <record id="view_log_restore_tree" model="ir.ui.view">
+        <field name="name">log.restore.tree</field>
+        <field name="model">excise.log.restore</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="log_line"/>
+            </tree>
+        </field>
+    </record>
+
     <!-- Define the action for viewing the logs -->
     <record id="action_restore_logs" model="ir.actions.act_window">
         <field name="name">Restore Logs</field>
@@ -19,16 +31,6 @@
         action="action_restore_logs"
         parent="stock.menu_warehouse_report" sequence="350"/>
 
-    <!-- Tree view to list logs -->
-    <record id="view_log_restore_tree" model="ir.ui.view">
-        <field name="name">log.restore.tree</field>
-        <field name="model">excise.log.restore</field>
-        <field name="arch" type="xml">
-            <tree>
-                <field name="log_line"/>
-            </tree>
-        </field>
-    </record>
 
     <!-- Form view to display logs in detail with a button to fetch logs -->
     <record id="view_log_restore_form" model="ir.ui.view">
