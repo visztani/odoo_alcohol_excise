@@ -47,7 +47,7 @@ Törzsadatok
                     Kisker
                         semmi
     
-    Termék
+    TERMÉK
         KNKód
         Fajtakód
         EU kód (Sör: B000)
@@ -56,9 +56,11 @@ Törzsadatok
         LOT
         BB
 
-    Raktár (saját)
+    RAKTÁR (saját)
+        Tulajdonos (Cég vagy Partner)
         Engedélyszám
             Raktárhely(ek)
+                Terméktulajdonos (Cég vagy Partner)
                 Biztosíték
                     1 - Biztosítékköteles
                     2 - Biztosítékmentes
@@ -68,25 +70,29 @@ Törzsadatok
     MOZGÁSOK
         Törzsadatok
             (Partner adatok)
-            Saját adatok
+            RAKTÁR.*
+            Sorok Összesített adóalapja
         Sorok
             Jogcímkód
             Termék
                 Név
-                alkohol
+                (Alkohol%)
             Mennyiség
+            Mennyiségi egység
             Adóalap soronként
-        Összesített adóalap
+            Adóalap mértékegység
+            Adómérték kód
 
 
     DOKUMENTUMOK
         Szállítólevél
-            Mozgás összes adata
+            MOZGÁS.Törzsadatok
             Rendszám
+            MOZGÁS.SOROK
         Gyártási bizonylat
-            Mozgás
-                Saját adatok
-                
+            MOZGÁS.Törzsadatok
+            MOZGÁS.SOROK
+
 
     ELEKTRONIKUS ADATKÖZLÉS (NAV)
         Napi jelentés (J28)
