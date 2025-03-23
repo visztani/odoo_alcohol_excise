@@ -64,6 +64,7 @@ Törzsadatok
     RAKTÁR (saját)
         Tulajdonos (Cég vagy Partner)
         Engedélyszám
+        Vámhivatal hivatkozási száma
             Raktárhely(ek)
                 Terméktulajdonos (Cég vagy Partner)
                 Készlettípus
@@ -75,10 +76,13 @@ Törzsadatok
     MOZGÁSOK
         Törzsadatok
             (Partner adatok)
+            (AHK)
             RAKTÁR.*
             Sorok Összesített adóalapja
-        Sorok
             Jogcímkód
+            
+        Sorok
+            Sorszám (1-től)
             Termék
                 Név
                 (Alkohol%)
@@ -114,7 +118,7 @@ Törzsadatok
                         MOZGÁS.Termék.Fajtakód
                         MOZGÁS.Termék.Adóalap
                         RAKTÁR.Raktárhely.Készlettípus
-                            MOZGÁS.Sorok.Jogcímkód
+                            MOZGÁS.Törzsadatok.Jogcímkód
                             MOZGÁS.Sorok.Adóalap soronként
                             MOZGÁS.Sorok.Adómérték kód
                             Partner.Név
@@ -122,16 +126,17 @@ Törzsadatok
                             Partner.Adószám
                             MOZGÁS.ID
                     Gyártás
-                        MOZGÁS.jogcímkód
+                        MOZGÁS.Törzsadatok.Jogcímkód
                 Növekedés
                     Gyártás
                         MOZGÁS.Termék.KNKód
                         MOZGÁS.Termék.Fajtakód
                         MOZGÁS.Termék.Adóalap
                         RAKTÁR.Raktárhely.Készlettípus
-                            MOZGÁS.Sorok.Jogcímkód
+                            MOZGÁS.Törzsadatok.Jogcímkód
                             MOZGÁS.Sorok.Adóalap soronként
                             MOZGÁS.Sorok.Adómérték kód
+        
         Havi jelentés (BEV_J02)
             Cég.Engedélyszám(keretengedély)
             Cég.Adószám
@@ -145,8 +150,33 @@ Törzsadatok
                     Időszak.MOZGÁS.SOROK.Termék.Adóalap soronként * ADÓMÉRTÉK KÓD.Összeg
 
         EMCS visszaigazolás (IE818M)
+            Üzenetazonosító(RAKTÁR.Engedélszám+YYY.MM.DD+XYZ)
+            MOZGÁS.AHK
+            Cég.Engedélyszám (keretengedély)
+            Cég.Név
+            Cég.Székhely.Cím
+            Cég.Adószám
+            Keltezés.Helység
+            Keltezés.Dátum
+            Cég.Bejelentő.Adóazonosító
+            Cég.Telephely.Engedélyszám
+            RAKTÁR.Tulajdonos
+            RAKTÁR.Telephely.Cím
+            Nyelvkód
+            RAKTÁR.Vámhivatal Hivatkozási Száma
+            Keltezés.Dátum
+            MOZGÁS.Törzsadatok.Jogcímkód
+                Sorok
+                    MOZGÁS.Sorok.Sorszám
+                    MOZGÁS.Sorok.Termék.EU Kód
+                    MOZGÁS.Sorok.Termék.Fajtakód
+                    MOZGÁS.Sorok.Adóalap soronként
+                    RAKTÁR.Raktárhely.Készlettípus
+
         EMCS feladás (IE818)
     
     JELENTÉSEK
         Készletmozgás
+            MOZGÁSOK
         Készlet
+            RAKTÁR
