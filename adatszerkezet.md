@@ -55,13 +55,18 @@ Törzsadatok
         Adóalap mértékegysége (pl.: Alk%)
         LOT
         BB
+    
+    ADÓMÉRTÉK KÓD
+        Adómérték kód
+        Összeg
+        Devizanem
 
     RAKTÁR (saját)
         Tulajdonos (Cég vagy Partner)
         Engedélyszám
             Raktárhely(ek)
                 Terméktulajdonos (Cég vagy Partner)
-                Biztosíték
+                Készlettípus
                     1 - Biztosítékköteles
                     2 - Biztosítékmentes
                     3 - Adózott
@@ -82,6 +87,7 @@ Törzsadatok
             Adóalap soronként
             Adóalap mértékegység
             Adómérték kód
+            RAKTÁR.Raktárhely.Készlettípus
 
 
     DOKUMENTUMOK
@@ -96,7 +102,48 @@ Törzsadatok
 
     ELEKTRONIKUS ADATKÖZLÉS (NAV)
         Napi jelentés (J28)
+            Időszak
+            Cég (engedélyes)
+            Cég.Adószám
+            RAKTÁR.Engedélyszám
+            RAKTÁR.Telephely
+            Cég.Bejelentő.Adóazon
+                Csökkenés
+                    Kitárolás
+                        MOZGÁS.Termék.KNKód
+                        MOZGÁS.Termék.Fajtakód
+                        MOZGÁS.Termék.Adóalap
+                        RAKTÁR.Raktárhely.Készlettípus
+                            MOZGÁS.Sorok.Jogcímkód
+                            MOZGÁS.Sorok.Adóalap soronként
+                            MOZGÁS.Sorok.Adómérték kód
+                            Partner.Név
+                            Partner.Telephely.Cím
+                            Partner.Adószám
+                            MOZGÁS.ID
+                    Gyártás
+                        MOZGÁS.jogcímkód
+                Növekedés
+                    Gyártás
+                        MOZGÁS.Termék.KNKód
+                        MOZGÁS.Termék.Fajtakód
+                        MOZGÁS.Termék.Adóalap
+                        RAKTÁR.Raktárhely.Készlettípus
+                            MOZGÁS.Sorok.Jogcímkód
+                            MOZGÁS.Sorok.Adóalap soronként
+                            MOZGÁS.Sorok.Adómérték kód
         Havi jelentés (BEV_J02)
+            Cég.Engedélyszám(keretengedély)
+            Cég.Adószám
+            Cég.Székhely
+            Időszak
+            Bevallás fajtája (6)
+            Cég.Pénzforgalmi számla
+            Cég.Bejelentő
+                Sorok (fajtakódonként)
+                    Idöszak.MOZGÁS.SOROK.Termék.Fajtakód
+                    Időszak.MOZGÁS.SOROK.Termék.Adóalap soronként * ADÓMÉRTÉK KÓD.Összeg
+
         EMCS visszaigazolás (IE818M)
         EMCS feladás (IE818)
     
