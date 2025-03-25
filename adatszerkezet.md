@@ -9,9 +9,12 @@
 - **Partner**
   - Adószám
   - Gyártó esetén méret (alkohol esetén hektoliterben)
+  - Jövedéki ügyfél?
+  - B2C?
+  - B2B?
     - Telephely(ek)
       - Cím
-      - Nyitvatartás
+      - Nyitvatartási szám
       - Elérhetőség
         - Adóraktár
           - Engedélyszám
