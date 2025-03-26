@@ -55,6 +55,7 @@
   - RAKTÁR.*
   - Sorok Összesített adóalapja
   - Jogcímkód
+  - Rendszám
 
 - **Sorok**
   - Sorszám (1-től)
@@ -72,7 +73,6 @@
 
 - **Szállítólevél**
   - MOZGÁS.Törzsadatok
-  - Rendszám
   - MOZGÁS.SOROK
 
 - **Gyártási bizonylat**
