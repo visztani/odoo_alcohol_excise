@@ -9,6 +9,7 @@
     'application':True,
     'installable': True,
     'data': [
+        'views/res_company_view.xml',
         'views/excise_category_views.xml',
         'views/product_template_excise.xml',
         'views/excise_menu.xml',

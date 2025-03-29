@@ -3,7 +3,6 @@
 ## Törzsadatok
 
 - **Cég**
-  - Adószám
   - Engedélyszám (Keretengedély)
 
 - **Partner**
