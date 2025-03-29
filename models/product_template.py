@@ -12,9 +12,10 @@ class ProductTemplate(models.Model):
     excise_fajtakod = fields.Char('Fajtakód',help='Fajtakód')
     excise_guarantee_needed = fields.Boolean('Guarantee Needed',default=False,help='Excise Guarantee Needed')
     excise_stock_type = fields.Selection([
-        ('0', 'Biztosítékmentes'), ('1', 'Biztosítékköteles'),
-        ('3', 'Adózott jöv. termék'),
-        ('4', 'Nem jöv. term.')], string='Excise Stock Type',
+        ('0', 'Biztosítékmentes'), 
+        ('1', 'Biztosítékköteles'),
+        ('2', 'Adózott jöv. termék'),
+        ('3', 'Nem jöv. term.')], string='Excise Stock Type',
         index=True)
     
 class ProductProduct(models.Model):
