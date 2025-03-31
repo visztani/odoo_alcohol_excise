@@ -67,6 +67,7 @@
                         <group>
                             <field name="name"/>
                             <field name="tech_name"/>
+                            <field name="fajtakod"/>
                             <field name="excise_product_code"/>
                             <field name="currency_id"/>
                         </group>

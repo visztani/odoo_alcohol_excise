@@ -23,7 +23,6 @@
 - **TERMÉK**
   - KNKód
   - Fajtakód
-  - EU kód (Sör: B000) [Excise Product Code]
   - Adóalap (pl.: HLF)
   - Adóalap mértékegysége (pl.: Alk%)
   - LOT
@@ -33,6 +32,11 @@
   - Adómérték kód
   - Összeg
   - Devizanem
+
+  **FAJTAKÓD**
+  - EU kód (Sör: B000) [Excise Product Code]
+  - Adóalap mértékegység (pl.: HLF)
+  - ADÓMÉRTÉK KÓD
 
 - **RAKTÁR (saját)**
   - Tulajdonos (Cég vagy Partner)

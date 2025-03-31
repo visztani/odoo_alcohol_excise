@@ -40,6 +40,8 @@ class excise_category(models.Model):
             ('E920', 'E920 — Acyclic hydrocarbons mix – others'),
         ], string="Excise Product Code", help="Standardized EU excise product code (e.g. B000 for Beer)")
 
+        fajtakod = fields.Char ('Fajtakód', required = True)
+
     rate_per = fields.Selection([
         ('hectoabv','Rate per hectolitre per cent of alcohol in the beer'),
         ('hectoprod','Rate per hectolitre of product'),   
