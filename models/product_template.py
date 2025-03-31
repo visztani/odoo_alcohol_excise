@@ -9,7 +9,13 @@ class ProductTemplate(models.Model):
     excise_category = fields.Many2one('excise.category','Excise Category')
     excise_volume = fields.Float('Excisable Volume (L)', help='Volume for the basis of the Excise calculation')
     excise_knkod = fields.Char('KN Code',help='Közös Nómenklatúra (Common Nomenclature) Code')
-    excise_fajtakod = fields.Char('Fajtakód',help='Fajtakód')
+    excise_fajtakod = fields.Char(
+    string='Fajtakód',
+    related='excise_category.fajtakod',
+    readonly=True,
+    store=True
+)
+
     
     excise_guarantee_needed = fields.Boolean('Guarantee Needed',default=False,help='Excise Guarantee Needed')
     excise_stock_type = fields.Selection([
@@ -18,12 +24,14 @@ class ProductTemplate(models.Model):
         ('2', 'Adózott jöv. termék'),
         ('3', 'Nem jöv. term.')], string='Excise Stock Type', index=True)
 
+    '''
     @api.constrains('excise_active', 'excise_category')
     def _check_excise_category_required(self):
         for record in self:
             if record.excise_active and not record.excise_category:
                 raise exceptions.ValidationError(_("Ha a jövedéki követés be van kapcsolva, kötelező megadni a jövedéki kategóriát."))
-    
+    '''
+
 class ProductProduct(models.Model):
     _inherit = 'product.product'
 
