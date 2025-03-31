@@ -17,6 +17,12 @@ class ProductTemplate(models.Model):
         ('1', 'Biztosítékköteles'),
         ('2', 'Adózott jöv. termék'),
         ('3', 'Nem jöv. term.')], string='Excise Stock Type', index=True)
+
+    @api.constrains('excise_active', 'excise_category')
+    def _check_excise_category_required(self):
+        for record in self:
+            if record.excise_active and not record.excise_category:
+                raise exceptions.ValidationError(_("Ha a jövedéki követés be van kapcsolva, kötelező megadni a jövedéki kategóriát."))
     
 class ProductProduct(models.Model):
     _inherit = 'product.product'
