@@ -99,6 +99,7 @@ class excise_category_rate(models.Model):
                            default=lambda self: fields.Date.today())
     category_id = fields.Many2one('excise.category', string='Category', readonly=True)
     rate = fields.Monetary('Rate')
+    adomertek_kod = fields.Char('Rate Code'required=True, index=True)
 
     currency_id = fields.Many2one('res.currency', string="Currency", compute='_compute_currency', readonly = True)
 
