@@ -41,6 +41,9 @@
                 <field name="excise_unpaid" attrs="{'invisible': [('excise_warehouse_no', '=', False)]}"/>
                 <field name="excise_paid_manual" attrs="{'invisible': [('excise_warehouse_no', '=', False)]}"/>
 
+                <!-- Excise Stock Type mező hozzáadása -->
+                <field name="excise_stock_type" />
+
                 <!-- Partner (tulajdonos) mező hozzáadása -->
                 <field name="owner_partner_id"/>
             </field>
