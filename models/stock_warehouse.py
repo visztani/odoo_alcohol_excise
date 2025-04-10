@@ -46,9 +46,8 @@ class StockLocation(models.Model):
         string='Excise Stock Type',
         index=True,
         required=False,
-        related='location_id.excise_stock_type',
-        inherited=True,
-        readonly=False,  # Lehetővé tesszük a manuális felülírást
+        #related='location_id.excise_stock_type',
+        #inherited=True,
         store=True,
     )
 
