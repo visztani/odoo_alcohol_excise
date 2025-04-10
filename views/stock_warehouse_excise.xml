@@ -34,9 +34,15 @@
         <field name="inherit_id" ref="stock.view_location_form"/>
         <field name="arch" type="xml">
             <field name="return_location" position="after">
-                <field name="excise_warehouse_no" attrs="{'invisible':True}"/>  
-                <field name="excise_unpaid" attrs="{'invisible':[('excise_warehouse_no', '=', False)]}"/>                
-                <field name="excise_paid_manual" attrs="{'invisible':[('excise_warehouse_no', '=', False)]}"/>  
+                <!-- Excise Warehouse No. mező rejtett alapértelmezettként -->
+                <field name="excise_warehouse_no" attrs="{'invisible':True}"/>
+                
+                <!-- Az excise_unpaid és excise_paid_manual mezők csak akkor láthatók, ha excise_warehouse_no értéke nem üres -->
+                <field name="excise_unpaid" attrs="{'invisible': [('excise_warehouse_no', '=', False)]}"/>
+                <field name="excise_paid_manual" attrs="{'invisible': [('excise_warehouse_no', '=', False)]}"/>
+
+                <!-- Partner (tulajdonos) mező hozzáadása -->
+                <field name="partner_id" position="after"> 
             </field>
         </field>
     </record>

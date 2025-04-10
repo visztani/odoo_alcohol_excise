@@ -15,6 +15,9 @@ class Location(models.Model):
     excise_unpaid = fields.Boolean('Duty Unpaid',help='Location stores stock wtihout excise', compute='_compute_excise_unpaid')
     excise_paid_manual = fields.Boolean('Duty Paid location', help='Location is a duty paid location within a duty unpaid warehouse')
     excise_warehouse_no = fields.Char('Excise Warehouse No.', help='number issued by tax authority to suspend excise liablity', compute='_compute_whseno')
+    
+    # Partner, aki a raktárhelyen tárolja a terméket
+    owner_partner_id = fields.Many2one('res.partner', string="Product Owner", help="Partner who owns the product in this location")
 
     @api.depends('excise_paid_manual')
     def _compute_excise_unpaid(self):
