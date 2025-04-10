@@ -59,6 +59,13 @@ class StockLocation(models.Model):
         if self.location_id and not self.excise_stock_type:
             self.excise_stock_type = self.location_id.excise_stock_type
 
+    @api.depends('excise_paid_manual')
+    def _compute_excise_unpaid(self):
+        for loc in self:
+            if loc.excise_paid_manual:
+                loc.excise_unpaid = False
+                return
+            loc.excise_unpaid =  loc.warehouse_id.excise_warehouse_no
 
 
     
