@@ -5,7 +5,9 @@ class Warehouse(models.Model):
     _inherit = 'stock.warehouse'
 
     excise_warehouse_no = fields.Char('Excise Warehouse No.', help='number issued by tax authority to suspend excise liablity')
-    excise_car_number = fields.Char('Rendszám')
+    # excise_car_number = fields.Char('Rendszám')
+    excise_customs_office_name = fields.Char('Customs Office Name', help='Name of the customs office')
+    excise_customs_office_reference_number = fields.Char('Customs Office Reference Number', help='Reference number issued by the customs authority')
 
 class Location(models.Model):
     _inherit = 'stock.location'
