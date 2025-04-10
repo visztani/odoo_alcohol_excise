@@ -51,14 +51,13 @@ class StockLocation(models.Model):
 
     @api.model
     def create(self, vals):
-        def create(self, vals):
-            # Ha van szülő hely és nincs megadva excise_stock_type,
-            # örököljük a szülő értékét
-            if 'location_id' in vals and 'excise_stock_type' not in vals:
-                parent = self.env['stock.location'].browse(vals['location_id'])
-                if parent and parent.excise_stock_type:
-                    vals['excise_stock_type'] = parent.excise_stock_type
-            return super(StockLocation, self).create(vals)
+        # Ha van szülő hely és nincs megadva excise_stock_type,
+        # örököljük a szülő értékét
+        if 'location_id' in vals and 'excise_stock_type' not in vals:
+            parent = self.env['stock.location'].browse(vals['location_id'])
+            if parent and parent.excise_stock_type:
+                vals['excise_stock_type'] = parent.excise_stock_type
+        return super(StockLocation, self).create(vals)
 
     def write(self, vals):
         # When parent's excise_stock_type changes, propagate to children if needed
