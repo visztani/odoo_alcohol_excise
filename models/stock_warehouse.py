@@ -50,6 +50,15 @@ class StockLocation(models.Model):
     )
 
     @api.model
+    def create(self, vals):
+        # If creating a child location and excise_stock_type isn't specified,
+        # inherit from parent
+        if 'location_id' in vals and 'excise_stock_type' not in vals:
+            parent = self.browse(vals['location_id'])
+            if parent:
+                vals['excise_stock_type'] = parent.excise_stock_type
+        return super(StockLocation, self).create(vals)
+
     def write(self, vals):
         # When parent's excise_stock_type changes, propagate to children if needed
         if 'excise_stock_type' in vals:
