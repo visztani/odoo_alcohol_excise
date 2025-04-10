@@ -31,11 +31,12 @@ class Location(models.Model):
         required=True,
     )
 
-    @api.onchange('location_id')
-    def _onchange_location_id(self):
-        """Frissíti a stock type-ot a szülő location stock type-jára"""
-        if self.location_id and self.location_id.excise_stock_type:
-            self.excise_stock_type = self.location_id.excise_stock_type
+    @api.depends('location_id.excise_stock_type')
+    def _compute_excise_stock_type(self):
+        """Frissíti a gyermek hely stock type-ot, ha a szülő stock type-ja változik"""
+        for loc in self:
+            if loc.location_id and loc.location_id.excise_stock_type:
+                loc.excise_stock_type = loc.location_id.excise_stock_type
 
     @api.depends('excise_paid_manual')
     def _compute_excise_unpaid(self):
