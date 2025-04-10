@@ -19,18 +19,6 @@ class Location(models.Model):
     # Partner, aki a raktárhelyen tárolja a terméket
     owner_partner_id = fields.Many2one('res.partner', string="Product Owner", help="Partner who owns the product in this location")
 
-    excise_stock_type = fields.Selection(
-        [
-            ('0', 'Biztosítékmentes'),
-            ('1', 'Biztosítékköteles'),
-            ('2', 'Adózott jöv. termék'),
-            ('3', 'Nem jöv. term.')
-        ],
-        string='Excise Stock Type',
-        index=True,
-        required=True,
-    )
-
 class StockLocation(models.Model):
     _inherit = 'stock.location'
 
@@ -49,6 +37,8 @@ class StockLocation(models.Model):
 
     @api.model
     def create(self, vals):
+        # Ha van szülő hely és nincs megadva excise_stock_type,
+        # örököljük a szülő értékét
         if 'location_id' in vals and 'excise_stock_type' not in vals:
             parent = self.env['stock.location'].browse(vals['location_id'])
             if parent and parent.excise_stock_type:
@@ -56,27 +46,18 @@ class StockLocation(models.Model):
         return super(StockLocation, self).create(vals)
 
     def write(self, vals):
-        # Ha a szülő location változik
-        if 'location_id' in vals:
-            new_parent = self.env['stock.location'].browse(vals['location_id'])
+        # When parent's excise_stock_type changes, propagate to children if needed
+        if 'excise_stock_type' in vals:
             for location in self:
-                if new_parent and not location.excise_stock_type:
-                    vals['excise_stock_type'] = new_parent.excise_stock_type
-        
+                child_locations = self.search([('id', 'child_of', location.id), ('id', '!=', location.id)])
+                if child_locations:
+                    child_locations.write({'excise_stock_type': vals['excise_stock_type']})
         return super(StockLocation, self).write(vals)
-
-    @api.depends('location_id')
-    def _compute_excise_stock_type(self):
-        for location in self:
-            if location.location_id:
-                location.excise_stock_type = location.location_id.excise_stock_type
 
     @api.onchange('location_id')
     def _onchange_location_id(self):
-        if self.location_id:
-            # Csak akkor állítjuk be, ha még nincs érték VAGY a mező üres
-            if not self.excise_stock_type or self.excise_stock_type == self._origin.excise_stock_type:
-                self.excise_stock_type = self.location_id.excise_stock_type
+        if self.location_id and not self.excise_stock_type:
+            self.excise_stock_type = self.location_id.excise_stock_type
 
 
 
