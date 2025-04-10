@@ -51,13 +51,14 @@ class StockLocation(models.Model):
 
     @api.model
     def create(self, vals):
-        # If creating a child location and excise_stock_type isn't specified,
-        # inherit from parent
-        if 'location_id' in vals and 'excise_stock_type' not in vals:
-            parent = self.browse(vals['location_id'])
-            if parent:
-                vals['excise_stock_type'] = parent.excise_stock_type
-        return super(StockLocation, self).create(vals)
+        def create(self, vals):
+            # Ha van szülő hely és nincs megadva excise_stock_type,
+            # örököljük a szülő értékét
+            if 'location_id' in vals and 'excise_stock_type' not in vals:
+                parent = self.env['stock.location'].browse(vals['location_id'])
+                if parent and parent.excise_stock_type:
+                    vals['excise_stock_type'] = parent.excise_stock_type
+            return super(StockLocation, self).create(vals)
 
     def write(self, vals):
         # When parent's excise_stock_type changes, propagate to children if needed
@@ -67,6 +68,11 @@ class StockLocation(models.Model):
                 if child_locations:
                     child_locations.write({'excise_stock_type': vals['excise_stock_type']})
         return super(StockLocation, self).write(vals)
+
+    @api.onchange('location_id')
+    def _onchange_location_id(self):
+        if self.location_id and not self.excise_stock_type:
+            self.excise_stock_type = self.location_id.excise_stock_type
 
     @api.depends('excise_paid_manual')
     def _compute_excise_unpaid(self):
