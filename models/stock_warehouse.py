@@ -36,6 +36,9 @@ class Location(models.Model):
 class StockLocation(models.Model):
     _inherit = 'stock.location'
 
+    class StockLocation(models.Model):
+    _inherit = 'stock.location'
+
     excise_stock_type = fields.Selection(
         [
             ('0', 'Biztosítékmentes'),
@@ -45,8 +48,11 @@ class StockLocation(models.Model):
         ],
         string='Excise Stock Type',
         index=True,
-        required=True,
-        #default='0',  # Default value if not specified
+        required=False,
+        related='location_id.excise_stock_type',
+        inherited=True,
+        readonly=False,  # Lehetővé tesszük a manuális felülírást
+        store=True,
     )
 
     @api.model
