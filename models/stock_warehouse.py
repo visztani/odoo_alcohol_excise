@@ -29,7 +29,7 @@ class Location(models.Model):
         string='Excise Stock Type',
         index=True,
         required=True,
-        related='location_id.excise_stock_type',  # Related to the parent location's stock type
+        #related='location_id.excise_stock_type',  # Related to the parent location's stock type
         store=True  # Store the value in the database
     )
 
