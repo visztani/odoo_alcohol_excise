@@ -35,7 +35,7 @@
         <field name="arch" type="xml">
             <field name="return_location" position="after">
                 <!-- Excise Warehouse No. mező rejtett alapértelmezettként -->
-                <field name="excise_warehouse_no" attrs="{'invisible':True}"/>
+                <field name="excise_warehouse_no"/>
                 
                 <!-- Az excise_unpaid és excise_paid_manual mezők csak akkor láthatók, ha excise_warehouse_no értéke nem üres -->
                 <field name="excise_unpaid" attrs="{'invisible': [('excise_warehouse_no', '=', False)]}"/>
