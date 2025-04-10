@@ -36,9 +36,6 @@ class Location(models.Model):
 class StockLocation(models.Model):
     _inherit = 'stock.location'
 
-    class StockLocation(models.Model):
-    _inherit = 'stock.location'
-
     excise_stock_type = fields.Selection(
         [
             ('0', 'Biztosítékmentes'),
