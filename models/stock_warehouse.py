@@ -29,9 +29,13 @@ class Location(models.Model):
         string='Excise Stock Type',
         index=True,
         required=True,
-        related='location_id.excise_stock_type',  # Related to the parent location's stock type
-        store=True  # Store the value in the database
     )
+
+    @api.onchange('location_id')
+    def _onchange_location_id(self):
+        """Frissíti a stock type-ot a szülő location stock type-jára"""
+        if self.location_id and self.location_id.excise_stock_type:
+            self.excise_stock_type = self.location_id.excise_stock_type
 
     @api.depends('excise_paid_manual')
     def _compute_excise_unpaid(self):
