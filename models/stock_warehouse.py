@@ -51,13 +51,10 @@ class StockLocation(models.Model):
 
     @api.model
     def write(self, vals):
-        # Ha frissítjük az excise_stock_type-t, propagáljuk a gyerek locationökre
+        # When parent's excise_stock_type changes, propagate to children if needed
         if 'excise_stock_type' in vals:
             for location in self:
-                child_locations = self.search([
-                    ('location_id', 'child_of', location.id),
-                    ('id', '!=', location.id)
-                ])
+                child_locations = self.search([('id', 'child_of', location.id), ('id', '!=', location.id)])
                 if child_locations:
                     child_locations.write({'excise_stock_type': vals['excise_stock_type']})
         return super(StockLocation, self).write(vals)
