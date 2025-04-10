@@ -50,14 +50,6 @@ class StockLocation(models.Model):
     )
 
     @api.model
-    def create(self, vals):
-        # Ha gyerek locationt hozunk létre és nincs megadva excise_stock_type
-        if 'location_id' in vals and 'excise_stock_type' not in vals:
-            parent_location = self.browse(vals['location_id'])
-            if parent_location:
-                vals['excise_stock_type'] = parent_location.excise_stock_type
-        return super(StockLocation, self).create(vals)
-
     def write(self, vals):
         # Ha frissítjük az excise_stock_type-t, propagáljuk a gyerek locationökre
         if 'excise_stock_type' in vals:
