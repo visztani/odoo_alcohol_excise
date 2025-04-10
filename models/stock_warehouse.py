@@ -45,10 +45,8 @@ class StockLocation(models.Model):
         ],
         string='Excise Stock Type',
         index=True,
-        required=False,
-        #related='location_id.excise_stock_type',
-        #inherited=True,
-        store=True,
+        required=True,
+        #default='0',  # Default value if not specified
     )
 
     @api.model
