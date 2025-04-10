@@ -67,12 +67,20 @@ class StockLocation(models.Model):
         
         return super().write(vals)
 
+    @api.depends('location_id')
+    def _compute_excise_stock_type(self):
+        for location in self:
+            if location.location_id:
+                location.excise_stock_type = location.location_id.excise_stock_type
+
+'''
     @api.onchange('location_id')
     def _onchange_location_id(self):
         if self.location_id:
             # Csak akkor állítjuk be, ha még nincs érték VAGY a mező üres
             if not self.excise_stock_type or self.excise_stock_type == self._origin.excise_stock_type:
                 self.excise_stock_type = self.location_id.excise_stock_type
+'''
 
     @api.depends('excise_paid_manual')
     def _compute_excise_unpaid(self):
