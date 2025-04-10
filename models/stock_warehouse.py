@@ -31,12 +31,42 @@ class Location(models.Model):
         required=True,
     )
 
-    @api.depends('location_id.excise_stock_type')
-    def _compute_excise_stock_type(self):
-        """Frissíti a gyermek hely stock type-ot, ha a szülő stock type-ja változik"""
-        for loc in self:
-            if loc.location_id and loc.location_id.excise_stock_type:
-                loc.excise_stock_type = loc.location_id.excise_stock_type
+    from odoo import fields, models, api
+
+class StockLocation(models.Model):
+    _inherit = 'stock.location'
+
+    excise_stock_type = fields.Selection(
+        [
+            ('0', 'Biztosítékmentes'),
+            ('1', 'Biztosítékköteles'),
+            ('2', 'Adózott jöv. termék'),
+            ('3', 'Nem jöv. term.')
+        ],
+        string='Excise Stock Type',
+        index=True,
+        required=True,
+        default='0',  # Default value if not specified
+    )
+
+    @api.model
+    def create(self, vals):
+        # If creating a child location and excise_stock_type isn't specified,
+        # inherit from parent
+        if 'location_id' in vals and 'excise_stock_type' not in vals:
+            parent = self.browse(vals['location_id'])
+            if parent:
+                vals['excise_stock_type'] = parent.excise_stock_type
+        return super(StockLocation, self).create(vals)
+
+    def write(self, vals):
+        # When parent's excise_stock_type changes, propagate to children if needed
+        if 'excise_stock_type' in vals:
+            for location in self:
+                child_locations = self.search([('id', 'child_of', location.id), ('id', '!=', location.id)])
+                if child_locations:
+                    child_locations.write({'excise_stock_type': vals['excise_stock_type']})
+        return super(StockLocation, self).write(vals)
 
     @api.depends('excise_paid_manual')
     def _compute_excise_unpaid(self):
