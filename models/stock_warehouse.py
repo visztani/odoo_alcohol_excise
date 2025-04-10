@@ -31,8 +31,6 @@ class Location(models.Model):
         required=True,
     )
 
-    from odoo import fields, models, api
-
 class StockLocation(models.Model):
     _inherit = 'stock.location'
 
@@ -55,7 +53,7 @@ class StockLocation(models.Model):
             parent = self.env['stock.location'].browse(vals['location_id'])
             if parent and parent.excise_stock_type:
                 vals['excise_stock_type'] = parent.excise_stock_type
-        return super().create(vals)
+        return super(StockLocation, self).create(vals)
 
     def write(self, vals):
         # Ha a szülő location változik
@@ -65,7 +63,7 @@ class StockLocation(models.Model):
                 if new_parent and not location.excise_stock_type:
                     vals['excise_stock_type'] = new_parent.excise_stock_type
         
-        return super().write(vals)
+        return super(StockLocation, self).write(vals)
 
     @api.depends('location_id')
     def _compute_excise_stock_type(self):
