@@ -19,18 +19,19 @@ class Location(models.Model):
     # Partner, aki a raktárhelyen tárolja a terméket
     owner_partner_id = fields.Many2one('res.partner', string="Product Owner", help="Partner who owns the product in this location")
 
-    excise_stock_type = fields.Selection([
-        ('0', 'Biztosítékmentes'),
-        ('1', 'Biztosítékköteles'),
-        ('2', 'Adózott jöv. termék'),
-        ('3', 'Nem jöv. term.')
-    ], string='Excise Stock Type', index=True, required=True)
-
-    @api.onchange('location_id')
-    def _onchange_location_id(self):
-        # Ha a hely szülője is location típusú, akkor örökölje a szülő típusát
-        if self.location_id and self.location_id.location_id:
-            self.excise_stock_type = self.location_id.excise_stock_type
+    excise_stock_type = fields.Selection(
+        [
+            ('0', 'Biztosítékmentes'),
+            ('1', 'Biztosítékköteles'),
+            ('2', 'Adózott jöv. termék'),
+            ('3', 'Nem jöv. term.')
+        ],
+        string='Excise Stock Type',
+        index=True,
+        required=True,
+        related='location_id.excise_stock_type',  # Related to the parent location's stock type
+        store=True  # Store the value in the database
+    )
 
     @api.depends('excise_paid_manual')
     def _compute_excise_unpaid(self):
