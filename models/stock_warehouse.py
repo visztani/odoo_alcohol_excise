@@ -46,7 +46,7 @@ class StockLocation(models.Model):
         string='Excise Stock Type',
         index=True,
         required=True,
-        default='0',  # Default value if not specified
+        #default='0',  # Default value if not specified
     )
 
     @api.model
