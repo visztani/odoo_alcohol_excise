@@ -42,7 +42,7 @@
                 <field name="excise_paid_manual" attrs="{'invisible': [('excise_warehouse_no', '=', False)]}"/>
 
                 <!-- Partner (tulajdonos) mező hozzáadása -->
-                <field name="partner_id" position="after"> 
+                <field name="owner_partner_id"/>
             </field>
         </field>
     </record>
