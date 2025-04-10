@@ -51,19 +51,21 @@ class StockLocation(models.Model):
 
     @api.model
     def create(self, vals):
-        # If creating a child location and excise_stock_type isn't specified,
-        # inherit from parent
+        # Ha gyerek locationt hozunk létre és nincs megadva excise_stock_type
         if 'location_id' in vals and 'excise_stock_type' not in vals:
-            parent = self.browse(vals['location_id'])
-            if parent:
-                vals['excise_stock_type'] = parent.excise_stock_type
+            parent_location = self.browse(vals['location_id'])
+            if parent_location:
+                vals['excise_stock_type'] = parent_location.excise_stock_type
         return super(StockLocation, self).create(vals)
 
     def write(self, vals):
-        # When parent's excise_stock_type changes, propagate to children if needed
+        # Ha frissítjük az excise_stock_type-t, propagáljuk a gyerek locationökre
         if 'excise_stock_type' in vals:
             for location in self:
-                child_locations = self.search([('id', 'child_of', location.id), ('id', '!=', location.id)])
+                child_locations = self.search([
+                    ('location_id', 'child_of', location.id),
+                    ('id', '!=', location.id)
+                ])
                 if child_locations:
                     child_locations.write({'excise_stock_type': vals['excise_stock_type']})
         return super(StockLocation, self).write(vals)
