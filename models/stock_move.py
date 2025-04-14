@@ -25,14 +25,26 @@ class StockMove(models.Model):
         index=True,
         readonly=True)
     
+    
+    @api.depends('location_id.excise_stock_type')
+    def _compute_excise_stock_type(self):
+        for record in self:
+            if record.location_id:
+                record.excise_move_excise_stock_type = record.location_id.excise_stock_type
+            else:
+                record.excise_move_excise_stock_type = False
+
+    '''
     @api.depends('product_id')
     def _compute_excise_stock_type(self):
         for record in self:
             if record.product_id:
-                _logger.info('EM Computing excise stock type for product ID %s', record.product_id.excise_stock_type)
-                record.excise_move_excise_stock_type = record.product_id.excise_stock_type
+                #_logger.info('EM Computing excise stock type for product ID %s', record.product_id.excise_stock_type)
+                #record.excise_move_excise_stock_type = record.product_id.excise_stock_type
+                pass
             else:
                 _logger.info('EM No product associated with this excise move record')
+    '''
 
     @api.depends('product_id', 'product_uom_qty', 'product_id.excise_hlf') # type: ignore
     def _compute_total_hlf(self):
