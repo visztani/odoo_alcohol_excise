@@ -39,7 +39,6 @@
                     <field name="excise_line_fajtakod"/>
                     <field name="excise_line_knkod"/>
                     <field name="excise_line_jogcimkod" attrs="{'readonly': [('state', 'in', ['sale', 'done', 'cancel'])]}"/>
-                    <field name="excise_sale_order_line_biztositek"/>
                 </xpath>
             </field>
     </record>
