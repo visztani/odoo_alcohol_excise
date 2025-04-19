@@ -41,7 +41,8 @@
 - **RAKTÁR (saját)**
   - Tulajdonos (Cég vagy Partner)
   - Engedélyszám
-  - Vámhivatal hivatkozási száma
+  - Illetékes vámhivatal neve
+  - Illetékes vámhivatal hivatkozási száma
     - Raktárhely(ek)
       - Terméktulajdonos (Cég vagy Partner)
       - Készlettípus
